@@ -40,6 +40,7 @@
                     <navigationItem key="navigationItem" id="2J0-vH-BDw"/>
                     <connections>
                         <segue destination="s9s-Ah-hQe" kind="presentation" identifier="CustomShowSegue" modalTransitionStyle="flipHorizontal" id="l7P-Gz-Nxs"/>
+                        <segue destination="lQQ-tI-aIY" kind="presentation" identifier="InteractivePushSegue" modalTransitionStyle="flipHorizontal" id="SA9-u0-uah"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3a-Rh-5uX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -71,6 +72,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O8r-AL-KII" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1401" y="117"/>
+        </scene>
+        <!--InteractiveTransition-->
+        <scene sceneID="yH6-AU-SSg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InteractiveTransition" id="lQQ-tI-aIY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HZg-sh-ZoI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1423.5" y="27"/>
         </scene>
     </scenes>
 </document>
