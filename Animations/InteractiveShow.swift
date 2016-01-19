@@ -9,13 +9,9 @@
 import UIKit
 
 class InteractiveShowViewController : UIViewController {
-    
     @IBAction func quit(sender: UIBarButtonItem) {
         navigationController?.dismissViewControllerAnimated(true, completion: nil)
     }
-}
-
-class InteractiveTransition : UIPercentDrivenInteractiveTransition {
 }
 
 class FadeAndScaleTransitionPush : NSObject, UIViewControllerAnimatedTransitioning {
@@ -72,7 +68,7 @@ class FadeAndScaleTransitionPop : NSObject, UIViewControllerAnimatedTransitionin
 
 class InteractiveNavigationControllerDelegate : NSObject, UINavigationControllerDelegate {
     
-    var navigationController : UINavigationController?
+    @IBOutlet weak var navigationController: UINavigationController!
     
     lazy var pushTransition : UIViewControllerAnimatedTransitioning = {
         return FadeAndScaleTransitionPush()
@@ -82,22 +78,78 @@ class InteractiveNavigationControllerDelegate : NSObject, UINavigationController
         return FadeAndScaleTransitionPop()
     }()
     
-    var interactiveTransition : UIViewControllerInteractiveTransitioning?
+    var interactiveTransition : UIPercentDrivenInteractiveTransition?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        addPanGesture()
+        addGesture()
     }
     
-    func addPanGesture() {
-        if let nc = navigationController {
-            let gesture = UIPanGestureRecognizer(target: self, action: "pan:")
-            nc.view.addGestureRecognizer(gesture)
+    func addGesture() {
+        let rightGesture = UIScreenEdgePanGestureRecognizer(target: self, action: "rightPan:")
+        rightGesture.edges = .Right
+        navigationController.view.addGestureRecognizer(rightGesture)
+        
+        let leftGesture = UIScreenEdgePanGestureRecognizer(target: self, action: "leftPan:")
+        leftGesture.edges = .Left
+        navigationController.view.addGestureRecognizer(leftGesture)
+    }
+    
+    func leftPan(recognizer: UIScreenEdgePanGestureRecognizer){
+        switch recognizer.state {
+        case .Began:
+            if navigationController.viewControllers.count == 2 {
+                interactiveTransition = UIPercentDrivenInteractiveTransition()
+                navigationController.popViewControllerAnimated(true)
+            }
+        case .Changed:
+            let translation = recognizer.translationInView(navigationController.view)
+            let percentage = fabs(translation.x / CGRectGetWidth(navigationController.view.bounds))
+            interactiveTransition?.updateInteractiveTransition(percentage)
+        case .Ended:
+            if recognizer.velocityInView(navigationController.view).x > 0 {
+                interactiveTransition?.finishInteractiveTransition()
+            }
+            else {
+                interactiveTransition?.cancelInteractiveTransition()
+            }
+            
+            interactiveTransition = nil
+        case .Cancelled, .Failed:
+            interactiveTransition?.cancelInteractiveTransition()
+            interactiveTransition = nil
+        case .Possible:
+            break
         }
     }
     
-    func pan(recognizer: UIPanGestureRecognizer){
+    func rightPan(recognizer: UIScreenEdgePanGestureRecognizer){
+        
+        switch recognizer.state {
+        case .Began:
+            if navigationController.viewControllers.count == 1 {
+                interactiveTransition = UIPercentDrivenInteractiveTransition()
+                navigationController.visibleViewController?.performSegueWithIdentifier("PushBlueEmptyControllerSegue", sender: self)
+            }
+        case .Changed:
+            let translation = recognizer.translationInView(navigationController.view)
+            let percentage = fabs(translation.x / CGRectGetWidth(navigationController.view.bounds))
+            interactiveTransition?.updateInteractiveTransition(percentage)
+        case .Ended:
+            if recognizer.velocityInView(navigationController.view).x < 0 {
+                interactiveTransition?.finishInteractiveTransition()
+            }
+            else {
+                interactiveTransition?.cancelInteractiveTransition()
+            }
+            
+            interactiveTransition = nil
+        case .Cancelled, .Failed:
+            interactiveTransition?.cancelInteractiveTransition()
+            interactiveTransition = nil
+        case .Possible:
+            break
+        }
     }
     
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {

@@ -26,7 +26,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Push" id="fqb-Yw-8iQ">
                             <connections>
-                                <segue destination="mZ9-gK-JiX" kind="show" id="MLX-u5-mxH"/>
+                                <segue destination="mZ9-gK-JiX" kind="show" identifier="PushBlueEmptyControllerSegue" id="MLX-u5-mxH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -69,7 +69,11 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j2l-Pp-k5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="M8Z-x6-CxS" customClass="InteractiveNavigationControllerDelegate" customModule="Animations" customModuleProvider="target"/>
+                <customObject id="M8Z-x6-CxS" customClass="InteractiveNavigationControllerDelegate" customModule="Animations" customModuleProvider="target">
+                    <connections>
+                        <outlet property="navigationController" destination="BFS-wb-71x" id="HEc-gR-cAX"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="1459" y="77"/>
         </scene>
