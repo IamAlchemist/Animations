@@ -16,7 +16,20 @@
                     <view key="view" contentMode="scaleToFill" id="sBA-uZ-JTu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oed-qt-1mN">
+                                <rect key="frame" x="255" y="285" width="91" height="30"/>
+                                <state key="normal" title="CustomShow"/>
+                                <connections>
+                                    <segue destination="Y92-mv-PIW" kind="show" id="rsi-vt-Z9c"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oed-qt-1mN" firstAttribute="centerY" secondItem="sBA-uZ-JTu" secondAttribute="centerY" id="39x-Im-jyy"/>
+                            <constraint firstItem="oed-qt-1mN" firstAttribute="centerX" secondItem="sBA-uZ-JTu" secondAttribute="centerX" id="Ybp-CR-ipq"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Custom Show" id="hHC-Td-wVE">
                         <barButtonItem key="leftBarButtonItem" title="Quit" id="xuu-PW-EpZ">
@@ -47,6 +60,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hW7-hb-BKo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1401" y="117"/>
+        </scene>
+        <!--Custom Pop-->
+        <scene sceneID="iXV-1r-ttb">
+            <objects>
+                <viewController id="Y92-mv-PIW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JUF-DS-aYu"/>
+                        <viewControllerLayoutGuide type="bottom" id="4BG-DR-OZ6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6T9-aO-Ls6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.086274509799999996" green="0.6588235294" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Custom Pop" id="3Xo-wL-VOW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ph4-0e-WJv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2950" y="117"/>
         </scene>
     </scenes>
 </document>
