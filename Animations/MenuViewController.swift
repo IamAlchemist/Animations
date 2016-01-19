@@ -36,7 +36,7 @@ class MenuTableViewCell : UITableViewCell {
 }
 
 class MenuDataSource : NSObject, UITableViewDataSource {
-    let titles = [String]()
+    let titles = ["CustomPush", "InteractivePush"]
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath) as! MenuTableViewCell
