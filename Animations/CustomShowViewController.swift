@@ -76,6 +76,7 @@ class FadeAndScaleTransitioningPop : NSObject, UIViewControllerAnimatedTransitio
         UIView.animateWithDuration(transitionDuration(transitionContext),
             animations: {
                 fromViewController.view.transform = CGAffineTransformMakeScale(0.1, 0.1)
+                fromViewController.view.alpha = 0.0
                 toViewController.view.alpha = 1
             })
             { _ in

@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Interactive Show View Controller-->
         <scene sceneID="mgE-gD-dPl">
             <objects>
-                <viewController id="vVY-oK-w5l" sceneMemberID="viewController">
+                <viewController id="vVY-oK-w5l" customClass="InteractiveShowViewController" customModule="Animations" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cxZ-pk-m45"/>
                         <viewControllerLayoutGuide type="bottom" id="Ptk-Pf-O53"/>
@@ -19,12 +19,39 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="omL-HR-LUX">
-                        <barButtonItem key="leftBarButtonItem" title="Quit" id="6Ox-uH-Z9m"/>
+                        <barButtonItem key="leftBarButtonItem" title="Quit" id="6Ox-uH-Z9m">
+                            <connections>
+                                <action selector="quit:" destination="vVY-oK-w5l" id="RrL-CM-vfo"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Push" id="fqb-Yw-8iQ">
+                            <connections>
+                                <segue destination="mZ9-gK-JiX" kind="show" id="MLX-u5-mxH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vbr-lm-o76" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2271" y="77"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="awy-2F-21b">
+            <objects>
+                <viewController id="mZ9-gK-JiX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="egb-tG-BVi"/>
+                        <viewControllerLayoutGuide type="bottom" id="3To-4o-QUb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YfT-N5-Yee">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bP8-Lc-0bu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3027" y="77"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NT7-d8-6h5">
@@ -37,10 +64,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+                        <outlet property="delegate" destination="M8Z-x6-CxS" id="nBq-nW-DS7"/>
                         <segue destination="vVY-oK-w5l" kind="relationship" relationship="rootViewController" id="R2r-sB-on1"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j2l-Pp-k5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="M8Z-x6-CxS" customClass="InteractiveNavigationControllerDelegate" customModule="Animations" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1459" y="77"/>
         </scene>
