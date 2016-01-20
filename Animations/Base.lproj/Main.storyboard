@@ -41,6 +41,7 @@
                     <connections>
                         <segue destination="s9s-Ah-hQe" kind="presentation" identifier="CustomShowSegue" modalTransitionStyle="flipHorizontal" id="l7P-Gz-Nxs"/>
                         <segue destination="lQQ-tI-aIY" kind="presentation" identifier="InteractivePushSegue" modalTransitionStyle="flipHorizontal" id="SA9-u0-uah"/>
+                        <segue destination="znV-ac-mr6" kind="presentation" identifier="DissolvedShowSegue" modalTransitionStyle="flipHorizontal" id="VRj-zC-mLD"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3a-Rh-5uX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -80,6 +81,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HZg-sh-ZoI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1423.5" y="27"/>
+        </scene>
+        <!--DissolvedTransition-->
+        <scene sceneID="zPp-yj-iyT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DissolvedTransition" id="znV-ac-mr6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QwA-xa-l34" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1421" y="206"/>
         </scene>
     </scenes>
 </document>
