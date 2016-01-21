@@ -10,57 +10,17 @@ import UIKit
 import GLKit
 import CoreImage
 
-struct ScalarFilterParameter
-{
-    var name: String?
-    var key: String
-    var minimumValue: Float?
-    var maximumValue: Float?
-    var currentValue: Float
-    
-    init(key: String, value: Float) {
-        self.key = key
-        self.currentValue = value
-    }
-    
-    init(name: String, key: String, minimumValue: Float, maximumValue: Float, currentValue: Float)
-    {
-        self.name = name
-        self.key = key
-        self.minimumValue = minimumValue
-        self.maximumValue = maximumValue
-        self.currentValue = currentValue
-    }
-}
-
-protocol CIFilterParameterAdjustmentDelegate {
-    func parameterValueDidChange(param: ScalarFilterParameter)
-}
-
-typealias Filter = CIImage -> CIImage
-
-class CompositedFilter {
-    var filters = [Filter]()
-    func drawOutputInContext(cicontext : CIContext){}
-}
-
 class FilteredImageView : GLKView {
     
     var ciContext : CIContext!
     
-    var filter : CIFilter? {
+    var filter : ImageFilter? {
         didSet {
             setNeedsDisplay()
         }
     }
     
-    var filter2 : CIFilter? {
-        didSet {
-            setNeedsDisplay()
-        }
-    }
-    
-    var inputImage : UIImage? {
+    var inputImages : [UIImage]? {
         didSet {
             setNeedsDisplay()
         }
@@ -78,27 +38,15 @@ class FilteredImageView : GLKView {
     }
     
     override func drawRect(rect: CGRect) {
-        if let inputImage = self.inputImage, filter = self.filter where ciContext != nil {
-            let inputCIImage = CIImage(image: inputImage)
-            filter.setValue(inputCIImage, forKeyPath: kCIInputImageKey)
-            if let outputImage = filter.outputImage {
-                clearBackground()
-                
-                let inputBounds = inputCIImage!.extent
-                let drawableBounds = CGRect(x: 0, y: 0, width: drawableWidth, height: drawableHeight)
-                let targetBounds = imageBoundsForContentMode(inputBounds, toRect: drawableBounds)
-                ciContext.drawImage(outputImage, inRect: targetBounds, fromRect: inputBounds)
-            }
-            
-            if let filter2 = self.filter2 {
-                filter2.setValue(inputCIImage, forKey: kCIInputImageKey)
-                if let outputImage = filter2.outputImage {
-                    let inputBounds = inputCIImage!.extent
-                    let drawableBounds = CGRect(x: 0, y: 0, width: drawableWidth, height: drawableHeight)
-                    let targetBounds = imageBoundsForContentMode(inputBounds, toRect: drawableBounds)
-                    ciContext.drawImage(outputImage, inRect: targetBounds, fromRect: inputBounds)
-                }
-            }
+        if let inputImages = self.inputImages, filter = self.filter where ciContext != nil {
+            let inputCIImages = ciImagesFromUIImages(inputImages)
+            clearBackground()
+
+            let outputImage = filter(inputCIImages)
+            let inputBounds = inputCIImages[0].extent
+            let drawableBounds = CGRect(x: 0, y: 0, width: drawableWidth, height: drawableHeight)
+            let targetBounds = imageBoundsForContentMode(inputBounds, toRect: drawableBounds)
+            ciContext.drawImage(outputImage, inRect: targetBounds, fromRect: inputBounds)
         }
     }
     
@@ -108,6 +56,17 @@ class FilteredImageView : GLKView {
     }
     
     // MARK: -  helper
+    func ciImagesFromUIImages(uiImages: [UIImage]) -> [CIImage]{
+        var ciImages = [CIImage]()
+        
+        for uiImage in uiImages {
+            let ciImage = CIImage(image: uiImage)!
+            ciImages.append(ciImage)
+        }
+        
+        return ciImages
+    }
+    
     func clearBackground() {
         var r: CGFloat = 0
         var g: CGFloat = 0
@@ -163,11 +122,3 @@ class FilteredImageView : GLKView {
         return CGRectIntegral(fitRect)
     }
 }
-
-extension FilteredImageView : CIFilterParameterAdjustmentDelegate {
-    func parameterValueDidChange(param: ScalarFilterParameter) {
-        filter?.setValue(param.currentValue, forKeyPath: param.key)
-        setNeedsDisplay()
-    }
-}
-

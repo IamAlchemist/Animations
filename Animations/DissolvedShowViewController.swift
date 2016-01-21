@@ -42,25 +42,25 @@ class DissolvedShowViewController : UIViewController {
     
     var displayLink : CADisplayLink?
     
-    var pixelScale : Float = 8
+    var progress : Float = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         dissolvedImageView.contentMode = .ScaleAspectFit
-        dissolvedImageView.inputImage = UIImage(named: "john-paulson")
-        dissolvedImageView.filter = CIFilter(name: "CIPixellate")
+        dissolvedImageView.inputImages = [UIImage(named: "john-paulson")!]
         
         displayLink = CADisplayLink(target: self, selector: "update:")
         displayLink?.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
-        displayLink?.paused = true
     }
     
     func update(displayLink : CADisplayLink) {
-        pixelScale += 2
-        pixelScale = pixelScale > 100 ? 2 : pixelScale;
-        let param = ScalarFilterParameter(key: "inputScale", value: pixelScale)
-        dissolvedImageView.parameterValueDidChange(param)
+        progress += 0.02
+        progress = progress > 1 ? 0 : progress;
+        
+//        let filter = pixellateImageFilter1D(progress * 100) |> alphaImageFilter1D(1-progress)
+        let filter = alphaImageFilter1D(1-progress)
+        dissolvedImageView.filter = filter
     }
 }
 

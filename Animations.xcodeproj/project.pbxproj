@@ -14,6 +14,7 @@
 		6482E0451C4C939200E3869E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6482E0431C4C939200E3869E /* Main.storyboard */; };
 		6482E0471C4C939300E3869E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6482E0461C4C939300E3869E /* Assets.xcassets */; };
 		6482E04A1C4C939300E3869E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6482E0481C4C939300E3869E /* LaunchScreen.storyboard */; };
+		64DA1B0B1C51158900EB668D /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1B0A1C51158900EB668D /* Filter.swift */; };
 		72815EBE1C4DE8DF003BA56F /* CustomShow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72815EBD1C4DE8DF003BA56F /* CustomShow.storyboard */; };
 		72815EC01C4DE940003BA56F /* CustomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72815EBF1C4DE940003BA56F /* CustomShowViewController.swift */; };
 		728813721C4FBD6B000CF114 /* DissolvedTransition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 728813701C4FBD6B000CF114 /* DissolvedTransition.storyboard */; };
@@ -31,6 +32,7 @@
 		6482E0461C4C939300E3869E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6482E0491C4C939300E3869E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6482E04B1C4C939300E3869E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64DA1B0A1C51158900EB668D /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		72815EBD1C4DE8DF003BA56F /* CustomShow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomShow.storyboard; sourceTree = "<group>"; };
 		72815EBF1C4DE940003BA56F /* CustomShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomShowViewController.swift; sourceTree = "<group>"; };
 		728813711C4FBD6B000CF114 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DissolvedTransition.storyboard; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		728813731C4FBDC9000CF114 /* DissolvedShow */ = {
 			isa = PBXGroup;
 			children = (
+				64DA1B0A1C51158900EB668D /* Filter.swift */,
 				728813761C4FBF0C000CF114 /* FilteredImageView.swift */,
 				728813701C4FBD6B000CF114 /* DissolvedTransition.storyboard */,
 				728813741C4FBE0B000CF114 /* DissolvedShowViewController.swift */,
@@ -199,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64DA1B0B1C51158900EB668D /* Filter.swift in Sources */,
 				72815EC01C4DE940003BA56F /* CustomShowViewController.swift in Sources */,
 				728813751C4FBE0B000CF114 /* DissolvedShowViewController.swift in Sources */,
 				6482E0421C4C939200E3869E /* MenuViewController.swift in Sources */,
