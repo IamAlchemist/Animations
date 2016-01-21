@@ -16,7 +16,30 @@
                     <view key="view" contentMode="scaleToFill" id="7pv-lS-z8u">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nXb-Pn-whl">
+                                <rect key="frame" x="202" y="242" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKf-oD-wuJ" customClass="FilteredImageView" customModule="Animations" customModuleProvider="target">
+                                <rect key="frame" x="200" y="225" width="200" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="vDp-BQ-8oI"/>
+                                    <constraint firstAttribute="height" constant="150" id="vQf-Gq-FaV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EKf-oD-wuJ" firstAttribute="centerX" secondItem="7pv-lS-z8u" secondAttribute="centerX" id="QfM-u6-bI9"/>
+                            <constraint firstItem="EKf-oD-wuJ" firstAttribute="centerY" secondItem="7pv-lS-z8u" secondAttribute="centerY" id="f56-Oc-ZFp"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="nXb-Pn-whl"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Eb0-aj-qPE">
                         <barButtonItem key="leftBarButtonItem" title="Quit" id="9Sy-xV-LTG">
@@ -25,10 +48,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dissolvedImageView" destination="EKf-oD-wuJ" id="wb8-Oh-QDy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2s-ac-QM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2262" y="543"/>
+            <point key="canvasLocation" x="2392" y="520"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sRl-Rh-YKc">
