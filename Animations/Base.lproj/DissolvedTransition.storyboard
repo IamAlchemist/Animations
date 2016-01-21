@@ -29,6 +29,10 @@
                                     <constraint firstAttribute="height" constant="150" id="vQf-Gq-FaV"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycg-AR-JKC">
+                                <rect key="frame" x="277" y="454" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -38,6 +42,7 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="nXb-Pn-whl"/>
+                                <exclude reference="ycg-AR-JKC"/>
                             </mask>
                         </variation>
                     </view>
@@ -47,6 +52,11 @@
                                 <action selector="quit:" destination="t3D-ep-Rxi" id="n9e-V7-4rH"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Push" id="oJ3-kX-m1S">
+                            <connections>
+                                <segue destination="v5G-8a-cnG" kind="show" id="AiC-Fe-BSx"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="dissolvedImageView" destination="EKf-oD-wuJ" id="wb8-Oh-QDy"/>
@@ -54,7 +64,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2s-ac-QM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2392" y="520"/>
+            <point key="canvasLocation" x="2222" y="543"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YCI-B8-Rer">
+            <objects>
+                <viewController id="v5G-8a-cnG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nQO-HL-o6j"/>
+                        <viewControllerLayoutGuide type="bottom" id="L7A-Qy-F59"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ptc-xO-k2m">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fqI-GY-udv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2955" y="543"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sRl-Rh-YKc">

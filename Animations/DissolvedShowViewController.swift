@@ -8,6 +8,30 @@
 
 import UIKit
 
+class DissolvedShowAnimatedTrasition : NSObject, UIViewControllerAnimatedTransitioning {
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+        return 1
+    }
+    
+    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+//        let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
+//        let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
+    }
+}
+
+class DissolvedShowNavigationDelegate : NSObject, UINavigationControllerDelegate {
+    func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        switch operation {
+        case .Push:
+            return DissolvedShowAnimatedTrasition()
+        case .Pop:
+            return nil
+        case .None:
+            return nil
+        }
+    }
+}
+
 class DissolvedShowViewController : UIViewController {
     
     @IBOutlet weak var dissolvedImageView: FilteredImageView!
@@ -33,7 +57,6 @@ class DissolvedShowViewController : UIViewController {
     }
     
     func update(displayLink : CADisplayLink) {
-        print("update : \(pixelScale)")
         pixelScale += 2
         pixelScale = pixelScale > 100 ? 2 : pixelScale;
         let param = ScalarFilterParameter(key: "inputScale", value: pixelScale)

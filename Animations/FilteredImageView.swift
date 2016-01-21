@@ -37,11 +37,24 @@ protocol CIFilterParameterAdjustmentDelegate {
     func parameterValueDidChange(param: ScalarFilterParameter)
 }
 
+typealias Filter = CIImage -> CIImage
+
+class CompositedFilter {
+    var filters = [Filter]()
+    func drawOutputInContext(cicontext : CIContext){}
+}
+
 class FilteredImageView : GLKView {
     
     var ciContext : CIContext!
     
     var filter : CIFilter? {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
+    var filter2 : CIFilter? {
         didSet {
             setNeedsDisplay()
         }
@@ -75,6 +88,16 @@ class FilteredImageView : GLKView {
                 let drawableBounds = CGRect(x: 0, y: 0, width: drawableWidth, height: drawableHeight)
                 let targetBounds = imageBoundsForContentMode(inputBounds, toRect: drawableBounds)
                 ciContext.drawImage(outputImage, inRect: targetBounds, fromRect: inputBounds)
+            }
+            
+            if let filter2 = self.filter2 {
+                filter2.setValue(inputCIImage, forKey: kCIInputImageKey)
+                if let outputImage = filter2.outputImage {
+                    let inputBounds = inputCIImage!.extent
+                    let drawableBounds = CGRect(x: 0, y: 0, width: drawableWidth, height: drawableHeight)
+                    let targetBounds = imageBoundsForContentMode(inputBounds, toRect: drawableBounds)
+                    ciContext.drawImage(outputImage, inRect: targetBounds, fromRect: inputBounds)
+                }
             }
         }
     }
