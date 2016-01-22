@@ -70,11 +70,11 @@ func blendWithAlphaMaskImageFilter3D(backgroundFilter : ImageFilter, inputFilter
         return filter.outputImage!
     }
 }
-func sourceOverCompositeImageFilter2D(filter1 : ImageFilter, filter2 : ImageFilter) -> ImageFilter {
+func sourceOverCompositeImageFilter2D(backgroundFilter : ImageFilter, inputFilter: ImageFilter) -> ImageFilter {
     return { images in
-        let imageOutput1 = filter1([images[0]])
-        let imageOutput2 = filter2([images[1]])
-        let params = [kCIInputImageKey: imageOutput1, kCIInputBackgroundImageKey: imageOutput2]
+        let backgroundImage = backgroundFilter([images[0]])
+        let inputImage = inputFilter([images[1]])
+        let params = [kCIInputImageKey: inputImage, kCIInputBackgroundImageKey: backgroundImage]
         let filter = CIFilter(name: "CISourceOverCompositing", withInputParameters: params)!
         return filter.outputImage!
     }

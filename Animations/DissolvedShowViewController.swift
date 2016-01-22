@@ -54,6 +54,7 @@ class DissolvedShowViewController : UIViewController {
         
         displayLink = CADisplayLink(target: self, selector: "update:")
         displayLink?.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
+        displayLink?.paused = true
     }
     
     func update(displayLink : CADisplayLink) {
