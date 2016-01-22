@@ -38,9 +38,10 @@ class FilteredImageView : GLKView {
     }
     
     override func drawRect(rect: CGRect) {
+        clearBackground()
+        
         if let inputImages = self.inputImages, filter = self.filter where ciContext != nil {
             let inputCIImages = ciImagesFromUIImages(inputImages)
-            clearBackground()
 
             let outputImage = filter(inputCIImages)
             let inputBounds = inputCIImages[0].extent

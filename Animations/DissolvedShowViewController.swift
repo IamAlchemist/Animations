@@ -48,7 +48,9 @@ class DissolvedShowViewController : UIViewController {
         super.viewDidLoad()
         
         dissolvedImageView.contentMode = .ScaleAspectFit
-        dissolvedImageView.inputImages = [UIImage(named: "john-paulson")!]
+        dissolvedImageView.inputImages = [UIImage(named: "john-paulson")!,
+            UIImage(named: "john-paulson")!,
+            UIImage(named: "john-paulson")!]
         
         displayLink = CADisplayLink(target: self, selector: "update:")
         displayLink?.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
@@ -58,9 +60,12 @@ class DissolvedShowViewController : UIViewController {
         progress += 0.02
         progress = progress > 1 ? 0 : progress;
         
-//        let filter = pixellateImageFilter1D(progress * 100) |> alphaImageFilter1D(1-progress)
-        let filter = alphaImageFilter1D(1-progress)
-        dissolvedImageView.filter = filter
+        let alphaFilter = alphaImageFilter1D(progress)
+        let backgroundFilter = whiteImageFilter1D()
+        let inputFilter = pixellateImageFilter1D((1 - progress) * 100)
+        let finalFilter = blendWithAlphaMaskImageFilter3D(backgroundFilter, inputFilter: inputFilter, alphaFilter: alphaFilter)
+        
+        dissolvedImageView.filter = finalFilter
     }
 }
 

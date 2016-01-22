@@ -25,18 +25,51 @@ func pixellateImageFilter1D(scale : Float) -> ImageFilter {
     }
 }
 
-func alphaImageFilter1D(alpha : Float) -> ImageFilter {
-    var normalAlpha = min(alpha, 1)
-    normalAlpha = max(normalAlpha, 0)
-
+func whiteImageFilter1D() -> ImageFilter {
     return { images in
-        let ciVector = CIVector(x: 1, y: 1, z: 1, w: CGFloat(normalAlpha))
-        let params = [kCIInputImageKey: images[0], "inputAVector": ciVector]
+        let zeroVector = CIVector(x: 0, y: 0, z: 0, w: 0)
+        let whiteVector = CIVector(x: 1, y: 1, z: 1, w: 1)
+        let params = [kCIInputImageKey: images[0],
+            "inputRVector" : zeroVector,
+            "inputGVector" : zeroVector,
+            "inputBVector" : zeroVector,
+            "inputAVector" : zeroVector,
+            "inputBiasVector": whiteVector]
         let filter = CIFilter(name: "CIColorMatrix", withInputParameters: params)!
         return filter.outputImage!
     }
 }
 
+func alphaImageFilter1D(alpha : Float) -> ImageFilter {
+    var normalAlpha = min(alpha, 1)
+    normalAlpha = max(normalAlpha, 0)
+
+    return { images in
+        let zeroVector = CIVector(x: 0, y: 0, z: 0, w: 0)
+        let ciVector = CIVector(x: 1, y: 0, z: 0, w: CGFloat(normalAlpha))
+        let params = [kCIInputImageKey: images[0],
+            "inputRVector" : zeroVector,
+            "inputGVector" : zeroVector,
+            "inputBVector" : zeroVector,
+            "inputAVector" : zeroVector,
+            "inputBiasVector": ciVector]
+        let filter = CIFilter(name: "CIColorMatrix", withInputParameters: params)!
+        return filter.outputImage!
+    }
+}
+
+func blendWithAlphaMaskImageFilter3D(backgroundFilter : ImageFilter, inputFilter : ImageFilter, alphaFilter : ImageFilter) -> ImageFilter {
+    return { images in
+        let backgroundImage = backgroundFilter([images[0]])
+        let inputImage = inputFilter([images[1]])
+        let maskImage = alphaFilter([images[2]])
+        let params = [kCIInputImageKey: inputImage,
+            kCIInputBackgroundImageKey: backgroundImage,
+            kCIInputMaskImageKey: maskImage]
+        let filter = CIFilter(name: "CIBlendWithAlphaMask", withInputParameters: params)!
+        return filter.outputImage!
+    }
+}
 func sourceOverCompositeImageFilter2D(filter1 : ImageFilter, filter2 : ImageFilter) -> ImageFilter {
     return { images in
         let imageOutput1 = filter1([images[0]])
