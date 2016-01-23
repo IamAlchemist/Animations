@@ -34,6 +34,7 @@ class DissolvedShowAnimatedTrasition : NSObject, UIViewControllerAnimatedTransit
     }
     
     func setup() {
+        animatingView.backgroundColor = UIColor.whiteColor()
         displayLink = CADisplayLink(target: self, selector: "update:")
         displayLink.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
         displayLink.paused = true
@@ -44,7 +45,6 @@ class DissolvedShowAnimatedTrasition : NSObject, UIViewControllerAnimatedTransit
             startTime = displayLink.timestamp
         }
         progress = max(min((displayLink.timestamp - startTime) / duration, 1), Double(0))
-        print("\(displayLink.timestamp - startTime), \(Float(progress))")
         animatingView.filter = dissolveFilter2DWithProgress(Float(progress))
         
         if progress == 1 {

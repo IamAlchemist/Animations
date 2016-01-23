@@ -61,9 +61,9 @@ func constantColorFilter(color : CIColor) -> ImageFilter{
 
 func dissolveFilter2DWithProgress(progress : Float) -> ImageFilter {
     return { images in
-        let progress_ = max(min(progress, 1), 0)
-        let backgroundImage = pixellateImageFilter1D(progress_ * 100)([images[0]])
-        let inputImage = pixellateImageFilter1D((1 - progress_) * 100)([images[1]])
+        let progress_ = max(min(progress, 0.99), 0.01)
+        let backgroundImage = pixellateImageFilter1D(progress_ * 50)([images[0]])
+        let inputImage = pixellateImageFilter1D((1 - progress_) * 50)([images[1]])
         let maskImage = alphaImageFilter1D(progress)([])
         let params = [kCIInputImageKey: inputImage,
             kCIInputBackgroundImageKey: backgroundImage,
