@@ -115,10 +115,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+                        <outlet property="delegate" destination="IYz-5I-Dpd" id="wFT-WG-0hB"/>
                         <segue destination="t3D-ep-Rxi" kind="relationship" relationship="rootViewController" id="6BM-0K-AeF"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IXM-OU-USC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="IYz-5I-Dpd" customClass="DissolvedShowNavigationDelegate" customModule="Animations" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1450" y="543"/>
         </scene>

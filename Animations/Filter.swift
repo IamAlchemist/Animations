@@ -41,8 +41,7 @@ func whiteImageFilter1D() -> ImageFilter {
 }
 
 func alphaImageFilter1D(alpha : Float) -> ImageFilter {
-    var normalAlpha = min(alpha, 1)
-    normalAlpha = max(normalAlpha, 0)
+    let normalAlpha = max(min(alpha, 1), 0)
 
     return { _ in
         let ciColor = CIColor(red: 1, green: 1, blue: 1, alpha: CGFloat(normalAlpha))
@@ -56,6 +55,20 @@ func constantColorFilter(color : CIColor) -> ImageFilter{
     return { _ in
         let params = [kCIInputColorKey : color]
         let filter = CIFilter(name: "CIConstantColorGenerator", withInputParameters: params)!
+        return filter.outputImage!
+    }
+}
+
+func dissolveFilter2DWithProgress(progress : Float) -> ImageFilter {
+    return { images in
+        let progress_ = max(min(progress, 1), 0)
+        let backgroundImage = pixellateImageFilter1D(progress_ * 100)([images[0]])
+        let inputImage = pixellateImageFilter1D((1 - progress_) * 100)([images[1]])
+        let maskImage = alphaImageFilter1D(progress)([])
+        let params = [kCIInputImageKey: inputImage,
+            kCIInputBackgroundImageKey: backgroundImage,
+            kCIInputMaskImageKey: maskImage]
+        let filter = CIFilter(name: "CIBlendWithAlphaMask", withInputParameters: params)!
         return filter.outputImage!
     }
 }

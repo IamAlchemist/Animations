@@ -8,14 +8,86 @@
 
 import UIKit
 
+extension UIView {
+    func snapshot() -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0)
+        layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+}
+
 class DissolvedShowAnimatedTrasition : NSObject, UIViewControllerAnimatedTransitioning {
+    
+    let duration : NSTimeInterval = 1
+    var animatingView = FilteredImageView(frame: CGRectZero)
+    var displayLink : CADisplayLink!
+    var startTime : NSTimeInterval = 0
+    var progress : Double = 0
+    
+    var transitionContext : UIViewControllerContextTransitioning!
+    
+    override init() {
+        super.init()
+        setup()
+    }
+    
+    func setup() {
+        displayLink = CADisplayLink(target: self, selector: "update:")
+        displayLink.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
+        displayLink.paused = true
+    }
+    
+    func update(displayLink: CADisplayLink){
+        if startTime == 0 {
+            startTime = displayLink.timestamp
+        }
+        progress = max(min((displayLink.timestamp - startTime) / duration, 1), Double(0))
+        print("\(displayLink.timestamp - startTime), \(Float(progress))")
+        animatingView.filter = dissolveFilter2DWithProgress(Float(progress))
+        
+        if progress == 1 {
+            finishInteractiveTransition()
+        }
+    }
+    
+    func finishInteractiveTransition() {
+        displayLink.paused = true
+        animatingView.removeFromSuperview()
+        transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)?.view.alpha = 1
+        transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)?.view.alpha = 1
+        transitionContext.completeTransition(true)
+    }
+
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return 1
+        return duration
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-//        let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
-//        let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
+        self.transitionContext = transitionContext
+        
+        let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
+        let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
+        
+        let toView = toViewController.view
+        let fromView = fromViewController.view
+        
+        let containerView = transitionContext.containerView()!
+        containerView.addSubview(toView)
+        containerView.sendSubviewToBack(toView)
+        
+        let sourceImage = fromView.snapshot()
+        let targeImage = toView.snapshot()
+        
+        animatingView.frame = containerView.bounds
+        animatingView.inputImages = [sourceImage, targeImage]
+        
+        toView.alpha = 0
+        
+        containerView.addSubview(animatingView)
+        startTime = 0
+        displayLink.paused = false
     }
 }
 
@@ -48,7 +120,7 @@ class DissolvedShowViewController : UIViewController {
         super.viewDidLoad()
         
         dissolvedImageView.contentMode = .ScaleAspectFit
-        dissolvedImageView.inputImages = [UIImage(named: "john-paulson")!]
+        dissolvedImageView.inputImages = [UIImage(named: "john-paulson")!,UIImage(named: "john-paulson-2")!]
         
         displayLink = CADisplayLink(target: self, selector: "update:")
         displayLink?.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
@@ -59,12 +131,7 @@ class DissolvedShowViewController : UIViewController {
         progress += 0.02
         progress = progress > 1 ? 0 : progress;
         
-        let inputFilter = pixellateImageFilter1D((1 - progress) * 100)
-        let finalFilter = blendWithAlphaMaskImageFilter1D(inputFilter,
-            backGroundColor: CIColor(red: 1, green: 0, blue: 0),
-            alpha: progress)
-
-        dissolvedImageView.filter = finalFilter
+        dissolvedImageView.filter = dissolveFilter2DWithProgress(progress)
     }
 }
 
