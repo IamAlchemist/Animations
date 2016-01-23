@@ -44,25 +44,27 @@ func alphaImageFilter1D(alpha : Float) -> ImageFilter {
     var normalAlpha = min(alpha, 1)
     normalAlpha = max(normalAlpha, 0)
 
-    return { images in
-        let zeroVector = CIVector(x: 0, y: 0, z: 0, w: 0)
-        let ciVector = CIVector(x: 1, y: 0, z: 0, w: CGFloat(normalAlpha))
-        let params = [kCIInputImageKey: images[0],
-            "inputRVector" : zeroVector,
-            "inputGVector" : zeroVector,
-            "inputBVector" : zeroVector,
-            "inputAVector" : zeroVector,
-            "inputBiasVector": ciVector]
-        let filter = CIFilter(name: "CIColorMatrix", withInputParameters: params)!
+    return { _ in
+        let ciColor = CIColor(red: 1, green: 1, blue: 1, alpha: CGFloat(normalAlpha))
+        let params = [kCIInputColorKey: ciColor]
+        let filter = CIFilter(name: "CIConstantColorGenerator", withInputParameters: params)!
         return filter.outputImage!
     }
 }
 
-func blendWithAlphaMaskImageFilter3D(backgroundFilter : ImageFilter, inputFilter : ImageFilter, alphaFilter : ImageFilter) -> ImageFilter {
+func constantColorFilter(color : CIColor) -> ImageFilter{
+    return { _ in
+        let params = [kCIInputColorKey : color]
+        let filter = CIFilter(name: "CIConstantColorGenerator", withInputParameters: params)!
+        return filter.outputImage!
+    }
+}
+
+func blendWithAlphaMaskImageFilter1D(inputFilter : ImageFilter, backGroundColor: CIColor, alpha : Float) -> ImageFilter {
     return { images in
-        let backgroundImage = backgroundFilter([images[0]])
-        let inputImage = inputFilter([images[1]])
-        let maskImage = alphaFilter([images[2]])
+        let backgroundImage = constantColorFilter(backGroundColor)([images[0]])
+        let maskImage = alphaImageFilter1D(alpha)([images[0]])
+        let inputImage = inputFilter([images[0]])
         let params = [kCIInputImageKey: inputImage,
             kCIInputBackgroundImageKey: backgroundImage,
             kCIInputMaskImageKey: maskImage]

@@ -54,18 +54,18 @@ class DissolvedShowViewController : UIViewController {
         
         displayLink = CADisplayLink(target: self, selector: "update:")
         displayLink?.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
-        displayLink?.paused = true
+//        displayLink?.paused = true
     }
     
     func update(displayLink : CADisplayLink) {
         progress += 0.02
         progress = progress > 1 ? 0 : progress;
         
-        let alphaFilter = alphaImageFilter1D(progress)
-        let backgroundFilter = whiteImageFilter1D()
         let inputFilter = pixellateImageFilter1D((1 - progress) * 100)
-        let finalFilter = blendWithAlphaMaskImageFilter3D(backgroundFilter, inputFilter: inputFilter, alphaFilter: alphaFilter)
-        
+        let finalFilter = blendWithAlphaMaskImageFilter1D(inputFilter,
+            backGroundColor: CIColor(red: 1, green: 0, blue: 0),
+            alpha: progress)
+
         dissolvedImageView.filter = finalFilter
     }
 }
