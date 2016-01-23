@@ -48,13 +48,11 @@ class DissolvedShowViewController : UIViewController {
         super.viewDidLoad()
         
         dissolvedImageView.contentMode = .ScaleAspectFit
-        dissolvedImageView.inputImages = [UIImage(named: "john-paulson")!,
-            UIImage(named: "john-paulson")!,
-            UIImage(named: "john-paulson")!]
+        dissolvedImageView.inputImages = [UIImage(named: "john-paulson")!]
         
         displayLink = CADisplayLink(target: self, selector: "update:")
         displayLink?.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
-//        displayLink?.paused = true
+        displayLink?.paused = true
     }
     
     func update(displayLink : CADisplayLink) {

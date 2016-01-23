@@ -23,12 +23,18 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKf-oD-wuJ" customClass="FilteredImageView" customModule="Animations" customModuleProvider="target">
                                 <rect key="frame" x="200" y="225" width="200" height="150"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.270588249" blue="0.29803922770000002" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="vDp-BQ-8oI"/>
                                     <constraint firstAttribute="height" constant="150" id="vQf-Gq-FaV"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="无尽的漂流" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOD-FD-uhO">
+                                <rect key="frame" x="225" y="139" width="150" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycg-AR-JKC">
                                 <rect key="frame" x="277" y="454" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
@@ -36,8 +42,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="WOD-FD-uhO" firstAttribute="centerX" secondItem="7pv-lS-z8u" secondAttribute="centerX" id="Q89-IZ-l27"/>
                             <constraint firstItem="EKf-oD-wuJ" firstAttribute="centerX" secondItem="7pv-lS-z8u" secondAttribute="centerX" id="QfM-u6-bI9"/>
                             <constraint firstItem="EKf-oD-wuJ" firstAttribute="centerY" secondItem="7pv-lS-z8u" secondAttribute="centerY" id="f56-Oc-ZFp"/>
+                            <constraint firstItem="WOD-FD-uhO" firstAttribute="top" secondItem="y0D-Vf-d2I" secondAttribute="bottom" constant="75" id="rbP-8t-hxe"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -77,7 +85,19 @@
                     <view key="view" contentMode="scaleToFill" id="ptc-xO-k2m">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你走吧最好别回头" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5I-kv-YZO">
+                                <rect key="frame" x="180" y="139" width="240" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o5I-kv-YZO" firstAttribute="centerX" secondItem="ptc-xO-k2m" secondAttribute="centerX" id="MVD-zg-J2q"/>
+                            <constraint firstItem="o5I-kv-YZO" firstAttribute="top" secondItem="nQO-HL-o6j" secondAttribute="bottom" constant="75" id="mbs-n9-vi3"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqI-GY-udv" userLabel="First Responder" sceneMemberID="firstResponder"/>
