@@ -44,7 +44,7 @@ class FilteredImageView : GLKView {
             let inputCIImages = ciImagesFromUIImages(inputImages)
 
             let outputImage = filter(inputCIImages)
-            let inputBounds = inputCIImages[0].extent
+            let inputBounds = CGRectInset(inputCIImages[0].extent, 30, 30)
             let drawableBounds = CGRect(x: 0, y: 0, width: drawableWidth, height: drawableHeight)
             let targetBounds = imageBoundsForContentMode(inputBounds, toRect: drawableBounds)
             ciContext.drawImage(outputImage, inRect: targetBounds, fromRect: inputBounds)
