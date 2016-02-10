@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Xwz-Fq-Zan">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Clock Face View Controller-->
+        <scene sceneID="xI1-Zv-CXu">
+            <objects>
+                <viewController id="Xwz-Fq-Zan" customClass="ClockFaceViewController" customModule="Animations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m1Q-BH-Bhi"/>
+                        <viewControllerLayoutGuide type="bottom" id="tLA-jv-ckH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FAh-MK-iTF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="goK-nd-SuI">
+                                <rect key="frame" x="20" y="384" width="560" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="jDS-WW-3FN"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="476497393.15154999">
+                                    <!--2016-02-07 00:23:13 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9OG-75-K81">
+                                <rect key="frame" x="20" y="346" width="560" height="30"/>
+                                <state key="normal" title="Update Time"/>
+                                <connections>
+                                    <action selector="updateTime:" destination="Xwz-Fq-Zan" eventType="touchUpInside" id="odQ-FM-tTK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="goK-nd-SuI" secondAttribute="trailing" id="N9A-Mk-Vva"/>
+                            <constraint firstItem="goK-nd-SuI" firstAttribute="top" secondItem="9OG-75-K81" secondAttribute="bottom" constant="8" id="UjJ-fs-M1V"/>
+                            <constraint firstItem="tLA-jv-ckH" firstAttribute="top" secondItem="goK-nd-SuI" secondAttribute="bottom" id="gmA-fJ-kej"/>
+                            <constraint firstItem="9OG-75-K81" firstAttribute="leading" secondItem="FAh-MK-iTF" secondAttribute="leadingMargin" id="tlw-bf-d8m"/>
+                            <constraint firstItem="goK-nd-SuI" firstAttribute="leading" secondItem="FAh-MK-iTF" secondAttribute="leadingMargin" id="xrT-eI-cFD"/>
+                            <constraint firstItem="9OG-75-K81" firstAttribute="trailing" secondItem="FAh-MK-iTF" secondAttribute="trailingMargin" id="yVz-qc-zbX"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="datePicker" destination="goK-nd-SuI" id="H7t-OT-UPc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qa4-Sm-sxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1645" y="578"/>
+        </scene>
+    </scenes>
+</document>

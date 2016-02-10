@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oHl-kr-003">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oHl-kr-003">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -42,6 +42,7 @@
                         <segue destination="s9s-Ah-hQe" kind="presentation" identifier="CustomShowSegue" modalTransitionStyle="flipHorizontal" id="l7P-Gz-Nxs"/>
                         <segue destination="lQQ-tI-aIY" kind="presentation" identifier="InteractivePushSegue" modalTransitionStyle="flipHorizontal" id="SA9-u0-uah"/>
                         <segue destination="znV-ac-mr6" kind="presentation" identifier="DissolvedShowSegue" modalTransitionStyle="flipHorizontal" id="VRj-zC-mLD"/>
+                        <segue destination="bdy-g0-2vS" kind="show" identifier="ShowClockFaceSegue" id="9h3-9i-VzO"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3a-Rh-5uX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -89,6 +90,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QwA-xa-l34" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1421" y="206"/>
+        </scene>
+        <!--ClockFace-->
+        <scene sceneID="LS3-8X-y3f">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ClockFace" id="bdy-g0-2vS" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sR6-NN-tVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1392.5" y="312"/>
         </scene>
     </scenes>
 </document>
