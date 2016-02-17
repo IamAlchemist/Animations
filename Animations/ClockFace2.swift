@@ -48,6 +48,7 @@ class ClockFace2 : CALayer {
     override func actionForKey(event: String) -> CAAction? {
         if event == "time" {
             let customAnimation = CABasicAnimation(keyPath: event)
+            CATransaction.setAnimationDuration(0.3)
             customAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
             customAnimation.fromValue = (presentationLayer() as! ClockFace2).time
             return customAnimation
