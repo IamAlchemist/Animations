@@ -17,6 +17,9 @@
 		6482E0451C4C939200E3869E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6482E0431C4C939200E3869E /* Main.storyboard */; };
 		6482E0471C4C939300E3869E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6482E0461C4C939300E3869E /* Assets.xcassets */; };
 		6482E04A1C4C939300E3869E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6482E0481C4C939300E3869E /* LaunchScreen.storyboard */; };
+		64A588541C6AC95300E72FEE /* ClockFace2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A588521C6AC95300E72FEE /* ClockFace2.storyboard */; };
+		64A588571C6ACAA300E72FEE /* ClockFace2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A588561C6ACAA300E72FEE /* ClockFace2.swift */; };
+		64A588591C6ACAFA00E72FEE /* ClockFace2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A588581C6ACAFA00E72FEE /* ClockFace2ViewController.swift */; };
 		64DA1B0B1C51158900EB668D /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1B0A1C51158900EB668D /* Filter.swift */; };
 		72815EBE1C4DE8DF003BA56F /* CustomShow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72815EBD1C4DE8DF003BA56F /* CustomShow.storyboard */; };
 		72815EC01C4DE940003BA56F /* CustomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72815EBF1C4DE940003BA56F /* CustomShowViewController.swift */; };
@@ -38,6 +41,9 @@
 		6482E0461C4C939300E3869E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6482E0491C4C939300E3869E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6482E04B1C4C939300E3869E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64A588531C6AC95300E72FEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ClockFace2.storyboard; sourceTree = "<group>"; };
+		64A588561C6ACAA300E72FEE /* ClockFace2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockFace2.swift; sourceTree = "<group>"; };
+		64A588581C6ACAFA00E72FEE /* ClockFace2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockFace2ViewController.swift; sourceTree = "<group>"; };
 		64DA1B0A1C51158900EB668D /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		72815EBD1C4DE8DF003BA56F /* CustomShow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomShow.storyboard; sourceTree = "<group>"; };
 		72815EBF1C4DE940003BA56F /* CustomShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomShowViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +103,7 @@
 			children = (
 				72869B161C4E6EE3009AF9C5 /* Menu */,
 				6482E0431C4C939200E3869E /* Main.storyboard */,
+				64A588551C6AC96900E72FEE /* ClockFace2 */,
 				6466CAF51C66C40500380D0F /* ClockFace */,
 				728813731C4FBDC9000CF114 /* DissolvedShow */,
 				646435D61C4E28A400828B18 /* InteractiveShow */,
@@ -104,6 +111,16 @@
 				72815EC21C4DE97A003BA56F /* Support */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		64A588551C6AC96900E72FEE /* ClockFace2 */ = {
+			isa = PBXGroup;
+			children = (
+				64A588521C6AC95300E72FEE /* ClockFace2.storyboard */,
+				64A588561C6ACAA300E72FEE /* ClockFace2.swift */,
+				64A588581C6ACAFA00E72FEE /* ClockFace2ViewController.swift */,
+			);
+			name = ClockFace2;
 			sourceTree = "<group>";
 		};
 		72815EC11C4DE95D003BA56F /* CustomShow */ = {
@@ -205,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6466CAF71C66C50B00380D0F /* ClockFace.storyboard in Resources */,
+				64A588541C6AC95300E72FEE /* ClockFace2.storyboard in Resources */,
 				72815EBE1C4DE8DF003BA56F /* CustomShow.storyboard in Resources */,
 				6482E04A1C4C939300E3869E /* LaunchScreen.storyboard in Resources */,
 				6482E0471C4C939300E3869E /* Assets.xcassets in Resources */,
@@ -224,11 +242,13 @@
 				64DA1B0B1C51158900EB668D /* Filter.swift in Sources */,
 				72815EC01C4DE940003BA56F /* CustomShowViewController.swift in Sources */,
 				6466CAFB1C66C6B900380D0F /* ClockFaceViewController.swift in Sources */,
+				64A588591C6ACAFA00E72FEE /* ClockFace2ViewController.swift in Sources */,
 				728813751C4FBE0B000CF114 /* DissolvedShowViewController.swift in Sources */,
 				6482E0421C4C939200E3869E /* MenuViewController.swift in Sources */,
 				6482E0401C4C939200E3869E /* AppDelegate.swift in Sources */,
 				6466CAF91C66C54E00380D0F /* ClockFace.swift in Sources */,
 				646435D81C4E28C500828B18 /* InteractiveShowViewController.swift in Sources */,
+				64A588571C6ACAA300E72FEE /* ClockFace2.swift in Sources */,
 				728813771C4FBF0C000CF114 /* FilteredImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +278,14 @@
 				6482E0491C4C939300E3869E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		64A588521C6AC95300E72FEE /* ClockFace2.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64A588531C6AC95300E72FEE /* Base */,
+			);
+			name = ClockFace2.storyboard;
 			sourceTree = "<group>";
 		};
 		728813701C4FBD6B000CF114 /* DissolvedTransition.storyboard */ = {

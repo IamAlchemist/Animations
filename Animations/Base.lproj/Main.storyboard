@@ -43,6 +43,7 @@
                         <segue destination="lQQ-tI-aIY" kind="presentation" identifier="InteractivePushSegue" modalTransitionStyle="flipHorizontal" id="SA9-u0-uah"/>
                         <segue destination="znV-ac-mr6" kind="presentation" identifier="DissolvedShowSegue" modalTransitionStyle="flipHorizontal" id="VRj-zC-mLD"/>
                         <segue destination="bdy-g0-2vS" kind="show" identifier="ShowClockFaceSegue" id="9h3-9i-VzO"/>
+                        <segue destination="4tB-hU-6iw" kind="show" identifier="ShowClockFace2Segue" id="LDX-zz-OxK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3a-Rh-5uX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -98,6 +99,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sR6-NN-tVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1392.5" y="312"/>
+        </scene>
+        <!--ClockFace2-->
+        <scene sceneID="heU-tb-xAd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ClockFace2" id="4tB-hU-6iw" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dWU-cq-SbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1396.5" y="395"/>
         </scene>
     </scenes>
 </document>
