@@ -9,6 +9,8 @@
 import UIKit
 
 class BezierPathViewController : UIViewController {
+    var shipLayer : CALayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,12 +30,26 @@ class BezierPathViewController : UIViewController {
         shipLayer.position = CGPoint(x: 30, y: 150)
         shipLayer.contents = UIImage(named: "Ship")?.CGImage
         view.layer.addSublayer(shipLayer)
+        self.shipLayer = shipLayer
         
         let animation = CAKeyframeAnimation()
         animation.keyPath = "position"
         animation.duration = 4
         animation.path = bezierPath.CGPath
         animation.rotationMode = kCAAnimationRotateAuto
+        animation.delegate = self
         shipLayer.addAnimation(animation, forKey: nil)
+        
+    }
+    
+    override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
+        if flag {
+            let animation = CABasicAnimation()
+            animation.keyPath = "transform.rotation"
+            animation.duration = 2
+            animation.byValue = NSNumber(double: M_PI * 2)
+            
+            shipLayer?.addAnimation(animation, forKey: nil)
+        }
     }
 }
