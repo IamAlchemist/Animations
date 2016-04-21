@@ -35,7 +35,7 @@ class DissolvedShowAnimatedTrasition : NSObject, UIViewControllerAnimatedTransit
     
     func setup() {
         animatingView.backgroundColor = UIColor.whiteColor()
-        displayLink = CADisplayLink(target: self, selector: "update:")
+        displayLink = CADisplayLink(target: self, selector: #selector(DissolvedShowAnimatedTrasition.update(_:)))
         displayLink.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
         displayLink.paused = true
     }
@@ -122,7 +122,7 @@ class DissolvedShowViewController : UIViewController {
         dissolvedImageView.contentMode = .ScaleAspectFit
         dissolvedImageView.inputImages = [UIImage(named: "john-paulson")!,UIImage(named: "john-paulson-2")!]
         
-        displayLink = CADisplayLink(target: self, selector: "update:")
+        displayLink = CADisplayLink(target: self, selector: #selector(DissolvedShowAnimatedTrasition.update(_:)))
         displayLink?.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
         displayLink?.paused = true
     }

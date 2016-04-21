@@ -86,11 +86,11 @@ class InteractiveNavigationControllerDelegate : NSObject, UINavigationController
     }
     
     func addGesture() {
-        let rightGesture = UIScreenEdgePanGestureRecognizer(target: self, action: "rightPan:")
+        let rightGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(InteractiveNavigationControllerDelegate.rightPan(_:)))
         rightGesture.edges = .Right
         navigationController.view.addGestureRecognizer(rightGesture)
         
-        let leftGesture = UIScreenEdgePanGestureRecognizer(target: self, action: "leftPan:")
+        let leftGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(InteractiveNavigationControllerDelegate.leftPan(_:)))
         leftGesture.edges = .Left
         navigationController.view.addGestureRecognizer(leftGesture)
     }

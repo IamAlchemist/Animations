@@ -72,6 +72,7 @@ class ClockFace2 : CALayer {
         CGContextSetLineWidth(ctx, 4)
         CGContextStrokeEllipseInRect(ctx, CGRectInset(bounds, 2, 2))
         
+        // show the min
         var angle = time / 12 * 2 * Float(M_PI)
         let center = CGPoint(x: bounds.width / 2, y: bounds.height / 2)
         CGContextSetLineWidth(ctx, 4)
@@ -79,6 +80,7 @@ class ClockFace2 : CALayer {
         CGContextAddLineToPoint(ctx, center.x + CGFloat(sin(angle) * 80), center.y - CGFloat(cos(angle) * 80))
         CGContextStrokePath(ctx)
         
+        // show the hour
         angle = (time - floor(time)) * 2.0 * Float(M_PI)
         CGContextSetLineWidth(ctx, 2)
         CGContextMoveToPoint(ctx, center.x, center.y)
