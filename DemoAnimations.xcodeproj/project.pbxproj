@@ -34,7 +34,7 @@
 		6466CAF61C66C50B00380D0F /* ClockFace.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClockFace.storyboard; sourceTree = "<group>"; };
 		6466CAF81C66C54E00380D0F /* ClockFace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockFace.swift; sourceTree = "<group>"; };
 		6466CAFA1C66C6B900380D0F /* ClockFaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockFaceViewController.swift; sourceTree = "<group>"; };
-		6482E03C1C4C939200E3869E /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6482E03C1C4C939200E3869E /* DemoAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6482E03F1C4C939200E3869E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6482E0411C4C939200E3869E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		6482E0441C4C939200E3869E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		6482E03D1C4C939200E3869E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6482E03C1C4C939200E3869E /* Animations.app */,
+				6482E03C1C4C939200E3869E /* DemoAnimations.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,9 +165,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6482E03B1C4C939200E3869E /* Animations */ = {
+		6482E03B1C4C939200E3869E /* DemoAnimations */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6482E04E1C4C939300E3869E /* Build configuration list for PBXNativeTarget "Animations" */;
+			buildConfigurationList = 6482E04E1C4C939300E3869E /* Build configuration list for PBXNativeTarget "DemoAnimations" */;
 			buildPhases = (
 				6482E0381C4C939200E3869E /* Sources */,
 				6482E0391C4C939200E3869E /* Frameworks */,
@@ -177,9 +177,9 @@
 			);
 			dependencies = (
 			);
-			name = Animations;
+			name = DemoAnimations;
 			productName = Animations;
-			productReference = 6482E03C1C4C939200E3869E /* Animations.app */;
+			productReference = 6482E03C1C4C939200E3869E /* DemoAnimations.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -198,7 +198,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6482E0371C4C939200E3869E /* Build configuration list for PBXProject "Animations" */;
+			buildConfigurationList = 6482E0371C4C939200E3869E /* Build configuration list for PBXProject "DemoAnimations" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -211,7 +211,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6482E03B1C4C939200E3869E /* Animations */,
+				6482E03B1C4C939200E3869E /* DemoAnimations */,
 			);
 		};
 /* End PBXProject section */
@@ -389,7 +389,7 @@
 				INFOPLIST_FILE = Animations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.morgenworks.Animations;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DemoAnimations;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -403,7 +403,7 @@
 				INFOPLIST_FILE = Animations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.morgenworks.Animations;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DemoAnimations;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -411,7 +411,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6482E0371C4C939200E3869E /* Build configuration list for PBXProject "Animations" */ = {
+		6482E0371C4C939200E3869E /* Build configuration list for PBXProject "DemoAnimations" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6482E04C1C4C939300E3869E /* Debug */,
@@ -420,7 +420,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6482E04E1C4C939300E3869E /* Build configuration list for PBXNativeTarget "Animations" */ = {
+		6482E04E1C4C939300E3869E /* Build configuration list for PBXNativeTarget "DemoAnimations" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6482E04F1C4C939300E3869E /* Debug */,
