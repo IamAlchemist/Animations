@@ -102,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				72869B161C4E6EE3009AF9C5 /* Menu */,
-				6482E0431C4C939200E3869E /* Main.storyboard */,
 				64A588551C6AC96900E72FEE /* ClockFace2 */,
 				6466CAF51C66C40500380D0F /* ClockFace */,
 				728813731C4FBDC9000CF114 /* DissolvedShow */,
@@ -146,6 +145,7 @@
 		72869B161C4E6EE3009AF9C5 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				6482E0431C4C939200E3869E /* Main.storyboard */,
 				6482E0411C4C939200E3869E /* MenuViewController.swift */,
 			);
 			name = Menu;
