@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gTK-by-909">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Group Anim View Controller-->
+        <scene sceneID="xJt-xp-cds">
+            <objects>
+                <viewController id="gTK-by-909" customClass="GroupAnimViewController" customModule="DemoAnimations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qpp-pY-22A"/>
+                        <viewControllerLayoutGuide type="bottom" id="m02-PG-rPx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pSA-pB-0AA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6MD-eF-dB1">
+                                <rect key="frame" x="40" y="40" width="520" height="540"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m02-PG-rPx" firstAttribute="top" secondItem="6MD-eF-dB1" secondAttribute="bottom" constant="20" id="G1M-LX-NQ9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6MD-eF-dB1" secondAttribute="trailing" constant="20" id="JAF-0d-JOu"/>
+                            <constraint firstItem="6MD-eF-dB1" firstAttribute="leading" secondItem="pSA-pB-0AA" secondAttribute="leadingMargin" constant="20" id="Muq-Lg-c5F"/>
+                            <constraint firstItem="6MD-eF-dB1" firstAttribute="top" secondItem="Qpp-pY-22A" secondAttribute="bottom" constant="20" id="jDZ-ie-bjU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="6MD-eF-dB1" id="dG3-kc-V9A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wXa-aw-R9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="319" y="478"/>
+        </scene>
+    </scenes>
+</document>

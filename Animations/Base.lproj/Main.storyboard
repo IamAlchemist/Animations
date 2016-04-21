@@ -45,7 +45,7 @@
                         <segue destination="bdy-g0-2vS" kind="show" identifier="ShowClockFaceSegue" id="9h3-9i-VzO"/>
                         <segue destination="4tB-hU-6iw" kind="show" identifier="ShowClockFace2Segue" id="LDX-zz-OxK"/>
                         <segue destination="66o-kS-aFc" kind="show" identifier="ShowClockFace3Segue" id="Ckn-EL-kxZ"/>
-                        <segue destination="Yfz-xb-78Y" kind="show" identifier="ShowKeyFrameSegue" id="m8Q-Rj-kxW"/>
+                        <segue destination="Yfz-xb-78Y" kind="show" identifier="ShowGroupAnimSegue" id="m8Q-Rj-kxW"/>
                         <segue destination="Qu0-dW-UCc" kind="show" identifier="ShowBezierPathSegue" id="c0D-rl-UCm"/>
                     </connections>
                 </tableViewController>
@@ -119,13 +119,13 @@
             </objects>
             <point key="canvasLocation" x="1391.5" y="-41"/>
         </scene>
-        <!--KeyFrame-->
+        <!--GroupAnim-->
         <scene sceneID="eFz-fa-vqW">
             <objects>
-                <viewControllerPlaceholder storyboardName="KeyFrame" id="Yfz-xb-78Y" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="GroupAnim" id="Yfz-xb-78Y" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KNK-5V-t6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1386" y="11"/>
+            <point key="canvasLocation" x="1390" y="13"/>
         </scene>
         <!--BezierPath-->
         <scene sceneID="mX8-6e-cDM">

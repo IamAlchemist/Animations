@@ -42,7 +42,7 @@ class MenuDataSource : NSObject, UITableViewDataSource {
                   "ShowClockFace",
                   "ShowClockFace2",
                   "ShowClockFace3",
-                  "ShowKeyFrame",
+                  "ShowGroupAnim",
                   "ShowBezierPath"]
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
