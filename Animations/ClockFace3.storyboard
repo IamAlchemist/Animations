@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Clock Face3 View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ClockFace3ViewController" customModule="DemoAnimations" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -54,6 +54,11 @@
                             <constraint firstItem="66B-ga-J2h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tQb-sA-waU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hourHand" destination="kgF-K1-Fvj" id="mwG-eT-9CK"/>
+                        <outlet property="minuteHand" destination="ba7-eA-PNq" id="gWa-nw-Dwq"/>
+                        <outlet property="secondHand" destination="R9e-ie-axN" id="u1l-vB-bRK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

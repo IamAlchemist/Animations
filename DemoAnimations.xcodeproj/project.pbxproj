@@ -22,6 +22,7 @@
 		64A588591C6ACAFA00E72FEE /* ClockFace2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A588581C6ACAFA00E72FEE /* ClockFace2ViewController.swift */; };
 		64DA1B0B1C51158900EB668D /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1B0A1C51158900EB668D /* Filter.swift */; };
 		723C10FD1CC87AAF00038FC6 /* ClockFace3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 723C10FC1CC87AAF00038FC6 /* ClockFace3.storyboard */; };
+		723C10FF1CC87D6F00038FC6 /* ClockFace3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723C10FE1CC87D6F00038FC6 /* ClockFace3ViewController.swift */; };
 		72815EBE1C4DE8DF003BA56F /* CustomShow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72815EBD1C4DE8DF003BA56F /* CustomShow.storyboard */; };
 		72815EC01C4DE940003BA56F /* CustomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72815EBF1C4DE940003BA56F /* CustomShowViewController.swift */; };
 		728813721C4FBD6B000CF114 /* DissolvedTransition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 728813701C4FBD6B000CF114 /* DissolvedTransition.storyboard */; };
@@ -47,6 +48,7 @@
 		64A588581C6ACAFA00E72FEE /* ClockFace2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockFace2ViewController.swift; sourceTree = "<group>"; };
 		64DA1B0A1C51158900EB668D /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		723C10FC1CC87AAF00038FC6 /* ClockFace3.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClockFace3.storyboard; sourceTree = "<group>"; };
+		723C10FE1CC87D6F00038FC6 /* ClockFace3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockFace3ViewController.swift; sourceTree = "<group>"; };
 		72815EBD1C4DE8DF003BA56F /* CustomShow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomShow.storyboard; sourceTree = "<group>"; };
 		72815EBF1C4DE940003BA56F /* CustomShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomShowViewController.swift; sourceTree = "<group>"; };
 		728813711C4FBD6B000CF114 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DissolvedTransition.storyboard; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				723C10FC1CC87AAF00038FC6 /* ClockFace3.storyboard */,
+				723C10FE1CC87D6F00038FC6 /* ClockFace3ViewController.swift */,
 			);
 			name = ClockFace3;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				64A588591C6ACAFA00E72FEE /* ClockFace2ViewController.swift in Sources */,
 				728813751C4FBE0B000CF114 /* DissolvedShowViewController.swift in Sources */,
 				6482E0421C4C939200E3869E /* MenuViewController.swift in Sources */,
+				723C10FF1CC87D6F00038FC6 /* ClockFace3ViewController.swift in Sources */,
 				6482E0401C4C939200E3869E /* AppDelegate.swift in Sources */,
 				6466CAF91C66C54E00380D0F /* ClockFace.swift in Sources */,
 				646435D81C4E28C500828B18 /* InteractiveShowViewController.swift in Sources */,
