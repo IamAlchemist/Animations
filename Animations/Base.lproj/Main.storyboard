@@ -44,6 +44,7 @@
                         <segue destination="znV-ac-mr6" kind="presentation" identifier="DissolvedShowSegue" modalTransitionStyle="flipHorizontal" id="VRj-zC-mLD"/>
                         <segue destination="bdy-g0-2vS" kind="show" identifier="ShowClockFaceSegue" id="9h3-9i-VzO"/>
                         <segue destination="4tB-hU-6iw" kind="show" identifier="ShowClockFace2Segue" id="LDX-zz-OxK"/>
+                        <segue destination="66o-kS-aFc" kind="show" identifier="ShowClockFace3Segue" id="Ckn-EL-kxZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3a-Rh-5uX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -74,7 +75,7 @@
                 <viewControllerPlaceholder storyboardName="CustomShow" id="s9s-Ah-hQe" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O8r-AL-KII" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1401" y="117"/>
+            <point key="canvasLocation" x="1396" y="-223"/>
         </scene>
         <!--InteractiveTransition-->
         <scene sceneID="yH6-AU-SSg">
@@ -82,7 +83,7 @@
                 <viewControllerPlaceholder storyboardName="InteractiveTransition" id="lQQ-tI-aIY" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HZg-sh-ZoI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1423.5" y="27"/>
+            <point key="canvasLocation" x="1418.5" y="-271"/>
         </scene>
         <!--DissolvedTransition-->
         <scene sceneID="zPp-yj-iyT">
@@ -90,7 +91,7 @@
                 <viewControllerPlaceholder storyboardName="DissolvedTransition" id="znV-ac-mr6" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QwA-xa-l34" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1421" y="206"/>
+            <point key="canvasLocation" x="1416" y="-177"/>
         </scene>
         <!--ClockFace-->
         <scene sceneID="LS3-8X-y3f">
@@ -98,7 +99,7 @@
                 <viewControllerPlaceholder storyboardName="ClockFace" id="bdy-g0-2vS" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sR6-NN-tVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1392.5" y="312"/>
+            <point key="canvasLocation" x="1387.5" y="-131"/>
         </scene>
         <!--ClockFace2-->
         <scene sceneID="heU-tb-xAd">
@@ -106,7 +107,15 @@
                 <viewControllerPlaceholder storyboardName="ClockFace2" id="4tB-hU-6iw" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWU-cq-SbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1396.5" y="395"/>
+            <point key="canvasLocation" x="1391.5" y="-85"/>
+        </scene>
+        <!--ClockFace3-->
+        <scene sceneID="ER1-B9-EIX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ClockFace3" id="66o-kS-aFc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dCy-dy-8tS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1391.5" y="-41"/>
         </scene>
     </scenes>
 </document>

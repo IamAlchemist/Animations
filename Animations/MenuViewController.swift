@@ -40,7 +40,8 @@ class MenuDataSource : NSObject, UITableViewDataSource {
                   "InteractivePush",
                   "DissolvedShow",
                   "ShowClockFace",
-                  "ShowClockFace2"]
+                  "ShowClockFace2",
+                  "ShowClockFace3"]
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath) as! MenuTableViewCell
