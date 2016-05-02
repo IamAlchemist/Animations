@@ -106,7 +106,7 @@ class PrivateTransitionContext : NSObject, UIViewControllerContextTransitioning 
     private var disappearingToRect : CGRect
     private var appearingToRect : CGRect
 
-    private let _containerView : UIView
+    private weak var _containerView : UIView!
     
 
     

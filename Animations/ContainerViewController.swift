@@ -9,6 +9,13 @@
 import UIKit
 import SnapKit
 
+
+protocol ContainerViewControllerDelegate {
+    func containerViewController(containerViewController: ContainerViewController, didSelectViewController viewController:UIViewController)
+    func containerViewController(containerViewController: ContainerViewController,
+                                 animationControllerForTransitionFromViewController fromViewController : UIViewController, toViewController: UIViewController) -> UIViewControllerAnimatedTransitioning
+}
+
 class ContainerViewController : UIViewController {
     var viewControllers : [UIViewController]
 
