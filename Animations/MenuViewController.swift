@@ -43,7 +43,8 @@ class MenuDataSource : NSObject, UITableViewDataSource {
                   "ShowClockFace2",
                   "ShowClockFace3",
                   "ShowGroupAnim",
-                  "ShowBezierPath"]
+                  "ShowBezierPath",
+                  "ShowCustomContainer"]
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath) as! MenuTableViewCell
