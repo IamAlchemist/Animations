@@ -155,14 +155,43 @@ class ContainerViewController : UIViewController {
         toView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         toView.frame = containerView.bounds
         
-        if let _fromViewController = fromViewController {
-            _fromViewController.willMoveToParentViewController(nil)
-            _fromViewController.view.removeFromSuperview()
-            _fromViewController.removeFromParentViewController()
+        fromViewController?.willMoveToParentViewController(nil)
+        addChildViewController(toViewController)
+        
+        guard let _fromViewController = fromViewController else {
+            containerView.addSubview(toView)
+            toViewController.didMoveToParentViewController(self)
+            return
         }
         
-        addChildViewController(toViewController)
-        containerView.addSubview(toView)
-        toViewController.didMoveToParentViewController(self)
+        let animator = FadeAndScaleTransitioningPop()
+        
+        guard let fromIndex = viewControllers.indexOf(_fromViewController),
+            let toIndex = viewControllers.indexOf(toViewController)
+            else { return }
+        
+        guard let transitionContext = PrivateTransitionContext(
+            fromViewController: _fromViewController,
+            toViewController: toViewController,
+            goingRight: toIndex > fromIndex)
+            else { return }
+        
+        transitionContext.animated = true
+        transitionContext.interactive = false
+        transitionContext.completionBlock = { didComplete in
+            _fromViewController.view.removeFromSuperview()
+            _fromViewController.removeFromParentViewController()
+            toViewController.didMoveToParentViewController(self)
+            
+            if animator.respondsToSelector(#selector(UIViewControllerAnimatedTransitioning.animationEnded(_:))) {
+                (animator as UIViewControllerAnimatedTransitioning).animationEnded?(didComplete)
+            }
+            
+            self.buttonView?.userInteractionEnabled = true
+        }
+        
+        buttonView?.userInteractionEnabled = false
+        
+        animator.animateTransition(transitionContext)
     }
 }
