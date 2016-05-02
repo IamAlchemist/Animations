@@ -21,6 +21,9 @@
 		64A588571C6ACAA300E72FEE /* ClockFace2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A588561C6ACAA300E72FEE /* ClockFace2.swift */; };
 		64A588591C6ACAFA00E72FEE /* ClockFace2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A588581C6ACAFA00E72FEE /* ClockFace2ViewController.swift */; };
 		64B054CD1CD736BC001FBEA1 /* CustomContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64B054CB1CD736BC001FBEA1 /* CustomContainer.storyboard */; };
+		64B054D01CD7376E001FBEA1 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B054CF1CD7376E001FBEA1 /* ContainerViewController.swift */; };
+		64B054D31CD73D51001FBEA1 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64B054D21CD73D51001FBEA1 /* SnapKit.framework */; };
+		64B054D61CD75080001FBEA1 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B054D51CD75080001FBEA1 /* ChildViewController.swift */; };
 		64DA1B0B1C51158900EB668D /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1B0A1C51158900EB668D /* Filter.swift */; };
 		723C10FD1CC87AAF00038FC6 /* ClockFace3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 723C10FC1CC87AAF00038FC6 /* ClockFace3.storyboard */; };
 		723C10FF1CC87D6F00038FC6 /* ClockFace3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723C10FE1CC87D6F00038FC6 /* ClockFace3ViewController.swift */; };
@@ -52,6 +55,9 @@
 		64A588561C6ACAA300E72FEE /* ClockFace2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockFace2.swift; sourceTree = "<group>"; };
 		64A588581C6ACAFA00E72FEE /* ClockFace2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockFace2ViewController.swift; sourceTree = "<group>"; };
 		64B054CC1CD736BC001FBEA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CustomContainer.storyboard; sourceTree = "<group>"; };
+		64B054CF1CD7376E001FBEA1 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		64B054D21CD73D51001FBEA1 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		64B054D51CD75080001FBEA1 /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 		64DA1B0A1C51158900EB668D /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		723C10FC1CC87AAF00038FC6 /* ClockFace3.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClockFace3.storyboard; sourceTree = "<group>"; };
 		723C10FE1CC87D6F00038FC6 /* ClockFace3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockFace3ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64B054D31CD73D51001FBEA1 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +106,7 @@
 		6482E0331C4C939200E3869E = {
 			isa = PBXGroup;
 			children = (
+				64B054D11CD73D2F001FBEA1 /* Frameworks */,
 				6482E03E1C4C939200E3869E /* Animations */,
 				6482E03D1C4C939200E3869E /* Products */,
 			);
@@ -144,8 +152,18 @@
 			isa = PBXGroup;
 			children = (
 				64B054CB1CD736BC001FBEA1 /* CustomContainer.storyboard */,
+				64B054CF1CD7376E001FBEA1 /* ContainerViewController.swift */,
+				64B054D51CD75080001FBEA1 /* ChildViewController.swift */,
 			);
 			name = CustomContainer;
+			sourceTree = "<group>";
+		};
+		64B054D11CD73D2F001FBEA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64B054D21CD73D51001FBEA1 /* SnapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		723C10F91CC87A4C00038FC6 /* ClockFace3 */ = {
@@ -225,6 +243,7 @@
 				6482E0381C4C939200E3869E /* Sources */,
 				6482E0391C4C939200E3869E /* Frameworks */,
 				6482E03A1C4C939200E3869E /* Resources */,
+				64B054D41CD73D55001FBEA1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -291,6 +310,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		64B054D41CD73D55001FBEA1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6482E0381C4C939200E3869E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -303,6 +339,8 @@
 				6466CAFB1C66C6B900380D0F /* ClockFaceViewController.swift in Sources */,
 				64A588591C6ACAFA00E72FEE /* ClockFace2ViewController.swift in Sources */,
 				728813751C4FBE0B000CF114 /* DissolvedShowViewController.swift in Sources */,
+				64B054D61CD75080001FBEA1 /* ChildViewController.swift in Sources */,
+				64B054D01CD7376E001FBEA1 /* ContainerViewController.swift in Sources */,
 				6482E0421C4C939200E3869E /* MenuViewController.swift in Sources */,
 				723C10FF1CC87D6F00038FC6 /* ClockFace3ViewController.swift in Sources */,
 				6482E0401C4C939200E3869E /* AppDelegate.swift in Sources */,
@@ -454,6 +492,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Animations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.morgenworks.Animations;
@@ -468,6 +510,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Animations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.morgenworks.Animations;
