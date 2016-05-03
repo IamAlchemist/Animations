@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 
-protocol ContainerViewControllerDelegate {
+protocol ContainerViewControllerDelegate : class {
     func containerViewController(containerViewController: ContainerViewController, didSelectViewController viewController:UIViewController)
     func containerViewController(containerViewController: ContainerViewController,
                                  animationControllerForTransitionFromViewController fromViewController : UIViewController, toViewController: UIViewController) -> UIViewControllerAnimatedTransitioning
@@ -18,6 +18,8 @@ protocol ContainerViewControllerDelegate {
 
 class ContainerViewController : UIViewController {
     var viewControllers : [UIViewController]
+    
+    weak var delegate : ContainerViewControllerDelegate?
 
     private var _selectedViewController : UIViewController? = nil
     private(set) var selectedViewController : UIViewController? {
