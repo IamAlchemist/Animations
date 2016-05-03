@@ -16,6 +16,10 @@ protocol ContainerViewControllerDelegate : class {
                                  animationControllerForTransitionFromViewController fromViewController : UIViewController, toViewController: UIViewController) -> UIViewControllerAnimatedTransitioning
 }
 
+extension ContainerViewControllerDelegate {
+    func containerViewController(containerViewController: ContainerViewController, didSelectViewController viewController:UIViewController){}
+}
+
 class ContainerViewController : UIViewController {
     var viewControllers : [UIViewController]
     
@@ -48,6 +52,7 @@ class ContainerViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        delegate = self
         selectedViewController = selectedViewController ?? viewControllers[0]
     }
     
@@ -208,5 +213,11 @@ class ContainerViewController : UIViewController {
         buttonView?.userInteractionEnabled = false
         
         animator.animateTransition(transitionContext)
+    }
+}
+
+extension ContainerViewController : ContainerViewControllerDelegate {
+    func containerViewController(containerViewController: ContainerViewController, animationControllerForTransitionFromViewController fromViewController: UIViewController, toViewController: UIViewController) -> UIViewControllerAnimatedTransitioning {
+        return FadeAndScaleTransitionPop()
     }
 }

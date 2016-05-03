@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FadeAndScaleTransitioningPush : NSObject, UIViewControllerAnimatedTransitioning {
+class FadeAndScaleTransitionPush : NSObject, UIViewControllerAnimatedTransitioning {
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return 1
     }
@@ -33,7 +33,7 @@ class FadeAndScaleTransitioningPush : NSObject, UIViewControllerAnimatedTransiti
     }
 }
 
-class FadeAndScaleTransitioningPop : NSObject, UIViewControllerAnimatedTransitioning {
+class FadeAndScaleTransitionPop : NSObject, UIViewControllerAnimatedTransitioning {
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return 1

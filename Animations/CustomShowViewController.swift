@@ -25,9 +25,9 @@ extension CustomShowViewController : UINavigationControllerDelegate {
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         switch operation {
         case .Push:
-            return FadeAndScaleTransitioningPush()
+            return FadeAndScaleTransitionPush()
         case .Pop:
-            return FadeAndScaleTransitioningPop()
+            return FadeAndScaleTransitionPop()
         case .None:
             return nil
         }
