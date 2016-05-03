@@ -130,6 +130,7 @@ class ContainerViewController : UIViewController {
     func buttonTapped(button: UIButton) {
         if button.tag < viewControllers.count {
             selectedViewController = viewControllers[button.tag]
+            delegate?.containerViewController(self, didSelectViewController: viewControllers[button.tag])
         }
     }
     
@@ -173,7 +174,12 @@ class ContainerViewController : UIViewController {
             return
         }
         
-        let animator = FadeAndScaleTransitioningPop()
+        let _animator = delegate?.containerViewController(
+            self,
+            animationControllerForTransitionFromViewController: _fromViewController,
+            toViewController: toViewController)
+        
+        let animator = _animator ?? ContainerDefaultTransition()
         
         guard let fromIndex = viewControllers.indexOf(_fromViewController),
             let toIndex = viewControllers.indexOf(toViewController)
