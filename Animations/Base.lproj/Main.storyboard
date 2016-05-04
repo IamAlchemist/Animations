@@ -48,6 +48,7 @@
                         <segue destination="Yfz-xb-78Y" kind="show" identifier="ShowGroupAnimSegue" id="m8Q-Rj-kxW"/>
                         <segue destination="Qu0-dW-UCc" kind="show" identifier="ShowBezierPathSegue" id="c0D-rl-UCm"/>
                         <segue destination="riF-ym-kII" kind="show" identifier="ShowCustomContainerSegue" id="sEv-pW-H1f"/>
+                        <segue destination="fXE-qg-0i4" kind="show" identifier="ShowInteractiveUIDynamicSegue" id="e1o-Sr-Wpu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3a-Rh-5uX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -143,6 +144,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Zb-Gy-ebL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1409" y="117"/>
+        </scene>
+        <!--InteractiveUIDynamic-->
+        <scene sceneID="MYW-Gb-3Z4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InteractiveUIDynamic" id="fXE-qg-0i4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ltv-oq-3Hh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1421.5" y="172"/>
         </scene>
     </scenes>
 </document>
