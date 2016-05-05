@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="top" id="ik8-jk-uOF"/>
                         <viewControllerLayoutGuide type="bottom" id="jgr-mg-4QW"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="naU-nI-cc7">
+                    <view key="view" contentMode="scaleToFill" id="naU-nI-cc7" customClass="InteractiveMainView" customModule="DemoAnimations" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

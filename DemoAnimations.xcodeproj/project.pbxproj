@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		640399D31CDB53FC00CD8F42 /* PaneBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640399D21CDB53FC00CD8F42 /* PaneBehavior.swift */; };
 		642E7C411CD9D35C000C3DDD /* InteractiveUIDynamic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 642E7C3F1CD9D35C000C3DDD /* InteractiveUIDynamic.storyboard */; };
-		642E7C441CD9D392000C3DDD /* InteractiveUIDynamicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E7C431CD9D392000C3DDD /* InteractiveUIDynamicViewController.swift */; };
+		642E7C461CD9EEFA000C3DDD /* InteractiveMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E7C451CD9EEFA000C3DDD /* InteractiveMainView.swift */; };
+		642E7C481CD9F1BD000C3DDD /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E7C471CD9F1BD000C3DDD /* DraggableView.swift */; };
 		646435D51C4E286500828B18 /* InteractiveTransition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646435D31C4E286500828B18 /* InteractiveTransition.storyboard */; };
 		646435D81C4E28C500828B18 /* InteractiveShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646435D71C4E28C500828B18 /* InteractiveShowViewController.swift */; };
 		6466CAF71C66C50B00380D0F /* ClockFace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6466CAF61C66C50B00380D0F /* ClockFace.storyboard */; };
@@ -43,8 +45,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		640399D21CDB53FC00CD8F42 /* PaneBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaneBehavior.swift; sourceTree = "<group>"; };
 		642E7C401CD9D35C000C3DDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/InteractiveUIDynamic.storyboard; sourceTree = "<group>"; };
-		642E7C431CD9D392000C3DDD /* InteractiveUIDynamicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveUIDynamicViewController.swift; sourceTree = "<group>"; };
+		642E7C451CD9EEFA000C3DDD /* InteractiveMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveMainView.swift; sourceTree = "<group>"; };
+		642E7C471CD9F1BD000C3DDD /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
 		646435D41C4E286500828B18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/InteractiveTransition.storyboard; sourceTree = "<group>"; };
 		646435D71C4E28C500828B18 /* InteractiveShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveShowViewController.swift; sourceTree = "<group>"; };
 		6466CAF61C66C50B00380D0F /* ClockFace.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClockFace.storyboard; sourceTree = "<group>"; };
@@ -96,7 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				642E7C3F1CD9D35C000C3DDD /* InteractiveUIDynamic.storyboard */,
-				642E7C431CD9D392000C3DDD /* InteractiveUIDynamicViewController.swift */,
+				642E7C451CD9EEFA000C3DDD /* InteractiveMainView.swift */,
+				640399D21CDB53FC00CD8F42 /* PaneBehavior.swift */,
+				642E7C471CD9F1BD000C3DDD /* DraggableView.swift */,
 			);
 			name = InteractiveUIDynamic;
 			sourceTree = "<group>";
@@ -353,13 +359,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				642E7C481CD9F1BD000C3DDD /* DraggableView.swift in Sources */,
 				723C11081CC8A76800038FC6 /* BezierPathAnimation.swift in Sources */,
 				723C11061CC8A5FB00038FC6 /* GroupAnimViewController.swift in Sources */,
 				64DA1B0B1C51158900EB668D /* Filter.swift in Sources */,
-				642E7C441CD9D392000C3DDD /* InteractiveUIDynamicViewController.swift in Sources */,
 				72815EC01C4DE940003BA56F /* CustomShowViewController.swift in Sources */,
 				6466CAFB1C66C6B900380D0F /* ClockFaceViewController.swift in Sources */,
 				64A588591C6ACAFA00E72FEE /* ClockFace2ViewController.swift in Sources */,
+				642E7C461CD9EEFA000C3DDD /* InteractiveMainView.swift in Sources */,
+				640399D31CDB53FC00CD8F42 /* PaneBehavior.swift in Sources */,
 				64B054DA1CD78CB1001FBEA1 /* Animator.swift in Sources */,
 				728813751C4FBE0B000CF114 /* DissolvedShowViewController.swift in Sources */,
 				64B054D61CD75080001FBEA1 /* ChildViewController.swift in Sources */,
