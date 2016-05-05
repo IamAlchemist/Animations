@@ -14,57 +14,57 @@ class InteractiveShowViewController : UIViewController {
     }
 }
 
-class FadeAndScaleTransitionPush : NSObject, UIViewControllerAnimatedTransitioning {
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return 1
-    }
-    
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
-        let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
-        
-        transitionContext.containerView()?.addSubview(toViewController.view)
-        toViewController.view.transform = CGAffineTransformMakeScale(0.1, 0.1)
-        toViewController.view.alpha = 0.0
-        
-        UIView.animateWithDuration(transitionDuration(transitionContext),
-            animations: {
-                toViewController.view.transform = CGAffineTransformIdentity
-                toViewController.view.alpha = 1.0
-                fromViewController.view.alpha = 0.0
-            })
-            { _ in
-                fromViewController.view.alpha = 1.0
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
-        }
-    }
-}
-
-class FadeAndScaleTransitionPop : NSObject, UIViewControllerAnimatedTransitioning {
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return 1
-    }
-    
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
-        let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
-        
-        toViewController.view.alpha = 0
-        transitionContext.containerView()?.addSubview(toViewController.view)
-        
-        UIView.animateWithDuration(transitionDuration(transitionContext),
-            animations: {
-                toViewController.view.alpha = 1
-                fromViewController.view.alpha = 0
-                fromViewController.view.transform = CGAffineTransformMakeScale(0.1, 0.1)
-            })
-            { _ in
-                fromViewController.view.alpha = 1.0
-                fromViewController.view.transform = CGAffineTransformIdentity
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
-        }
-    }
-}
+//class FadeAndScaleTransitionPush : NSObject, UIViewControllerAnimatedTransitioning {
+//    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+//        return 1
+//    }
+//    
+//    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+//        let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
+//        let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
+//        
+//        transitionContext.containerView()?.addSubview(toViewController.view)
+//        toViewController.view.transform = CGAffineTransformMakeScale(0.1, 0.1)
+//        toViewController.view.alpha = 0.0
+//        
+//        UIView.animateWithDuration(transitionDuration(transitionContext),
+//            animations: {
+//                toViewController.view.transform = CGAffineTransformIdentity
+//                toViewController.view.alpha = 1.0
+//                fromViewController.view.alpha = 0.0
+//            })
+//            { _ in
+//                fromViewController.view.alpha = 1.0
+//                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+//        }
+//    }
+//}
+//
+//class FadeAndScaleTransitionPop : NSObject, UIViewControllerAnimatedTransitioning {
+//    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+//        return 1
+//    }
+//    
+//    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+//        let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
+//        let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
+//        
+//        toViewController.view.alpha = 0
+//        transitionContext.containerView()?.addSubview(toViewController.view)
+//        
+//        UIView.animateWithDuration(transitionDuration(transitionContext),
+//            animations: {
+//                toViewController.view.alpha = 1
+//                fromViewController.view.alpha = 0
+//                fromViewController.view.transform = CGAffineTransformMakeScale(0.1, 0.1)
+//            })
+//            { _ in
+//                fromViewController.view.alpha = 1.0
+//                fromViewController.view.transform = CGAffineTransformIdentity
+//                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+//        }
+//    }
+//}
 
 class InteractiveNavigationControllerDelegate : NSObject, UINavigationControllerDelegate {
     

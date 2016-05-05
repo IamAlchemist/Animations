@@ -16,6 +16,10 @@ protocol ContainerViewControllerDelegate : class {
                                  animationControllerForTransitionFromViewController fromViewController : UIViewController, toViewController: UIViewController) -> UIViewControllerAnimatedTransitioning
 }
 
+extension ContainerViewControllerDelegate {
+    func containerViewController(containerViewController: ContainerViewController, didSelectViewController viewController:UIViewController){}
+}
+
 class ContainerViewController : UIViewController {
     var viewControllers : [UIViewController]
     
@@ -48,6 +52,7 @@ class ContainerViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        delegate = self
         selectedViewController = selectedViewController ?? viewControllers[0]
     }
     
@@ -130,6 +135,7 @@ class ContainerViewController : UIViewController {
     func buttonTapped(button: UIButton) {
         if button.tag < viewControllers.count {
             selectedViewController = viewControllers[button.tag]
+            delegate?.containerViewController(self, didSelectViewController: viewControllers[button.tag])
         }
     }
     
@@ -173,7 +179,12 @@ class ContainerViewController : UIViewController {
             return
         }
         
-        let animator = FadeAndScaleTransitioningPop()
+        let _animator = delegate?.containerViewController(
+            self,
+            animationControllerForTransitionFromViewController: _fromViewController,
+            toViewController: toViewController)
+        
+        let animator = _animator ?? ContainerDefaultTransition()
         
         guard let fromIndex = viewControllers.indexOf(_fromViewController),
             let toIndex = viewControllers.indexOf(toViewController)
@@ -202,5 +213,11 @@ class ContainerViewController : UIViewController {
         buttonView?.userInteractionEnabled = false
         
         animator.animateTransition(transitionContext)
+    }
+}
+
+extension ContainerViewController : ContainerViewControllerDelegate {
+    func containerViewController(containerViewController: ContainerViewController, animationControllerForTransitionFromViewController fromViewController: UIViewController, toViewController: UIViewController) -> UIViewControllerAnimatedTransitioning {
+        return FadeAndScaleTransitionPop()
     }
 }

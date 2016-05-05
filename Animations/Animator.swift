@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FadeAndScaleTransitioningPush : NSObject, UIViewControllerAnimatedTransitioning {
+class FadeAndScaleTransitionPush : NSObject, UIViewControllerAnimatedTransitioning {
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return 1
     }
@@ -33,7 +33,7 @@ class FadeAndScaleTransitioningPush : NSObject, UIViewControllerAnimatedTransiti
     }
 }
 
-class FadeAndScaleTransitioningPop : NSObject, UIViewControllerAnimatedTransitioning {
+class FadeAndScaleTransitionPop : NSObject, UIViewControllerAnimatedTransitioning {
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return 1
@@ -59,35 +59,47 @@ class FadeAndScaleTransitioningPop : NSObject, UIViewControllerAnimatedTransitio
     }
 }
 
-//class Animator : NSObject, UIViewControllerAnimatedTransitioning {
-//    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-//        return 1
-//    }
-//    
-//    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-//        let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
-//        let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
-//        
-//        guard let container = transitionContext.containerView(),
-//            let toView = toViewController?.view
-//            else { return }
-//        
-//        container.addSubview(toView)
-//        toView.alpha = 0
-//        
-//        UIView.animateWithDuration(
-//            transitionDuration(transitionContext),
-//            animations: {
-//                fromViewController?.view.transform = CGAffineTransformMakeScale(0.1, 0.1)
-//                toViewController?.view.alpha = 1
-//            },
-//            completion: { finished in
-//                fromViewController?.view.transform = CGAffineTransformIdentity
-//                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
-//            }
-//        )
-//    }
-//    
-//    func animationEnded(transitionCompleted: Bool) {
-//    }
-//}
+class ContainerDefaultTransition : NSObject, UIViewControllerAnimatedTransitioning {
+    let kChildViewPadding : CGFloat = 16
+    let kDamping : CGFloat = 0.75
+    let kInitialSpringVelocity : CGFloat = 0.5
+    
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+        return 1
+    }
+    
+    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+        guard let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey),
+            let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey),
+            let containerView = transitionContext.containerView()
+            else { return }
+        
+        let goingRight = transitionContext.initialFrameForViewController(toViewController).origin.x < transitionContext.finalFrameForViewController(toViewController).origin.x
+        let travelDistance = containerView.bounds.width + kChildViewPadding
+        let traval = CGAffineTransformMakeTranslation(goingRight ? travelDistance : -travelDistance, 0)
+        
+        containerView.addSubview(toViewController.view)
+        toViewController.view.alpha = 0
+        toViewController.view.transform = CGAffineTransformInvert(traval)
+        
+        UIView.animateWithDuration(
+            transitionDuration(transitionContext),
+            delay: 0,
+            usingSpringWithDamping: kDamping,
+            initialSpringVelocity: kInitialSpringVelocity,
+            options: .TransitionNone,
+            
+            animations: {
+                fromViewController.view.transform = traval
+                fromViewController.view.alpha = 0
+                toViewController.view.transform = CGAffineTransformIdentity
+                toViewController.view.alpha = 1
+            },
+            
+            completion: { finished in
+                fromViewController.view.transform = CGAffineTransformIdentity
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+            }
+        )
+    }
+}
