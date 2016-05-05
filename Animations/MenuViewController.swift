@@ -94,7 +94,8 @@ class MenuDataSource : NSObject, UITableViewDataSource {
                   "ShowGroupAnim",
                   "ShowBezierPath",
                   "ShowCustomContainer",
-                  "ShowInteractiveUIDynamic"]
+                  "ShowInteractiveUIDynamic",
+                  "ShowCustomIA"]
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath) as! MenuTableViewCell

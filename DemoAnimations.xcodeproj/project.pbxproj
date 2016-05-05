@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		640399D31CDB53FC00CD8F42 /* PaneBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640399D21CDB53FC00CD8F42 /* PaneBehavior.swift */; };
+		640399D61CDB7A3800CD8F42 /* CustomIA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 640399D41CDB7A3800CD8F42 /* CustomIA.storyboard */; };
 		642E7C411CD9D35C000C3DDD /* InteractiveUIDynamic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 642E7C3F1CD9D35C000C3DDD /* InteractiveUIDynamic.storyboard */; };
 		642E7C461CD9EEFA000C3DDD /* InteractiveMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E7C451CD9EEFA000C3DDD /* InteractiveMainView.swift */; };
 		642E7C481CD9F1BD000C3DDD /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E7C471CD9F1BD000C3DDD /* DraggableView.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		640399D21CDB53FC00CD8F42 /* PaneBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaneBehavior.swift; sourceTree = "<group>"; };
+		640399D51CDB7A3800CD8F42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CustomIA.storyboard; sourceTree = "<group>"; };
 		642E7C401CD9D35C000C3DDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/InteractiveUIDynamic.storyboard; sourceTree = "<group>"; };
 		642E7C451CD9EEFA000C3DDD /* InteractiveMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveMainView.swift; sourceTree = "<group>"; };
 		642E7C471CD9F1BD000C3DDD /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		640399D71CDB7A5900CD8F42 /* CustomIA */ = {
+			isa = PBXGroup;
+			children = (
+				640399D41CDB7A3800CD8F42 /* CustomIA.storyboard */,
+			);
+			name = CustomIA;
+			sourceTree = "<group>";
+		};
 		642E7C421CD9D374000C3DDD /* InteractiveUIDynamic */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +167,7 @@
 				723C110B1CC8A79400038FC6 /* BezierPath */,
 				64B054CE1CD73708001FBEA1 /* CustomContainer */,
 				642E7C421CD9D374000C3DDD /* InteractiveUIDynamic */,
+				640399D71CDB7A5900CD8F42 /* CustomIA */,
 				72815EC21C4DE97A003BA56F /* Support */,
 			);
 			path = Animations;
@@ -326,6 +337,7 @@
 				6482E04A1C4C939300E3869E /* LaunchScreen.storyboard in Resources */,
 				723C110A1CC8A78F00038FC6 /* BezierPath.storyboard in Resources */,
 				6482E0471C4C939300E3869E /* Assets.xcassets in Resources */,
+				640399D61CDB7A3800CD8F42 /* CustomIA.storyboard in Resources */,
 				642E7C411CD9D35C000C3DDD /* InteractiveUIDynamic.storyboard in Resources */,
 				64B054CD1CD736BC001FBEA1 /* CustomContainer.storyboard in Resources */,
 				728813721C4FBD6B000CF114 /* DissolvedTransition.storyboard in Resources */,
@@ -386,6 +398,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		640399D41CDB7A3800CD8F42 /* CustomIA.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				640399D51CDB7A3800CD8F42 /* Base */,
+			);
+			name = CustomIA.storyboard;
+			sourceTree = "<group>";
+		};
 		642E7C3F1CD9D35C000C3DDD /* InteractiveUIDynamic.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
