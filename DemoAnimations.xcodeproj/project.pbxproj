@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		640399D31CDB53FC00CD8F42 /* PaneBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640399D21CDB53FC00CD8F42 /* PaneBehavior.swift */; };
 		640399D61CDB7A3800CD8F42 /* CustomIA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 640399D41CDB7A3800CD8F42 /* CustomIA.storyboard */; };
+		640399D91CDB7B3C00CD8F42 /* ArtificialAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640399D81CDB7B3C00CD8F42 /* ArtificialAnimation.swift */; };
 		642E7C411CD9D35C000C3DDD /* InteractiveUIDynamic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 642E7C3F1CD9D35C000C3DDD /* InteractiveUIDynamic.storyboard */; };
 		642E7C461CD9EEFA000C3DDD /* InteractiveMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E7C451CD9EEFA000C3DDD /* InteractiveMainView.swift */; };
 		642E7C481CD9F1BD000C3DDD /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E7C471CD9F1BD000C3DDD /* DraggableView.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		640399D21CDB53FC00CD8F42 /* PaneBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaneBehavior.swift; sourceTree = "<group>"; };
 		640399D51CDB7A3800CD8F42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CustomIA.storyboard; sourceTree = "<group>"; };
+		640399D81CDB7B3C00CD8F42 /* ArtificialAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtificialAnimation.swift; sourceTree = "<group>"; };
 		642E7C401CD9D35C000C3DDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/InteractiveUIDynamic.storyboard; sourceTree = "<group>"; };
 		642E7C451CD9EEFA000C3DDD /* InteractiveMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveMainView.swift; sourceTree = "<group>"; };
 		642E7C471CD9F1BD000C3DDD /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				640399D41CDB7A3800CD8F42 /* CustomIA.storyboard */,
+				640399D81CDB7B3C00CD8F42 /* ArtificialAnimation.swift */,
 			);
 			name = CustomIA;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				64DA1B0B1C51158900EB668D /* Filter.swift in Sources */,
 				72815EC01C4DE940003BA56F /* CustomShowViewController.swift in Sources */,
 				6466CAFB1C66C6B900380D0F /* ClockFaceViewController.swift in Sources */,
+				640399D91CDB7B3C00CD8F42 /* ArtificialAnimation.swift in Sources */,
 				64A588591C6ACAFA00E72FEE /* ClockFace2ViewController.swift in Sources */,
 				642E7C461CD9EEFA000C3DDD /* InteractiveMainView.swift in Sources */,
 				640399D31CDB53FC00CD8F42 /* PaneBehavior.swift in Sources */,
