@@ -6,4 +6,4 @@ xcode_scheme: Animations
 before_script:
   - brew update
   - brew outdated carthage || brew upgrade carthage
-  - carthage update
+  - carthage update --platform iOS
