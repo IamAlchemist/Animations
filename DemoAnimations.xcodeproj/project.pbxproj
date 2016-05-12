@@ -306,7 +306,6 @@
 				TargetAttributes = {
 					6482E03B1C4C939200E3869E = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = STZUMTKX42;
 					};
 				};
 			};
