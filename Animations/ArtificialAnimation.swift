@@ -5,6 +5,7 @@
 //  Created by wizard on 5/5/16.
 //  Copyright © 2016 Alchemist. All rights reserved.
 //
+//  http://objccn.io/issue-12-6/
 
 import UIKit
 

@@ -23,6 +23,8 @@
 		6482E0451C4C939200E3869E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6482E0431C4C939200E3869E /* Main.storyboard */; };
 		6482E0471C4C939300E3869E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6482E0461C4C939300E3869E /* Assets.xcassets */; };
 		6482E04A1C4C939300E3869E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6482E0481C4C939300E3869E /* LaunchScreen.storyboard */; };
+		648348EA1CF7DD8C005D99B4 /* LayerAnimation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648348E91CF7DD8C005D99B4 /* LayerAnimation.storyboard */; };
+		648348ED1CF7DFA6005D99B4 /* LayerAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648348EC1CF7DFA6005D99B4 /* LayerAnimationViewController.swift */; };
 		64A588541C6AC95300E72FEE /* ClockFace2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A588521C6AC95300E72FEE /* ClockFace2.storyboard */; };
 		64A588571C6ACAA300E72FEE /* ClockFace2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A588561C6ACAA300E72FEE /* ClockFace2.swift */; };
 		64A588591C6ACAFA00E72FEE /* ClockFace2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A588581C6ACAFA00E72FEE /* ClockFace2ViewController.swift */; };
@@ -65,6 +67,8 @@
 		6482E0461C4C939300E3869E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6482E0491C4C939300E3869E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6482E04B1C4C939300E3869E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		648348E91CF7DD8C005D99B4 /* LayerAnimation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LayerAnimation.storyboard; sourceTree = "<group>"; };
+		648348EC1CF7DFA6005D99B4 /* LayerAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerAnimationViewController.swift; sourceTree = "<group>"; };
 		64A588531C6AC95300E72FEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ClockFace2.storyboard; sourceTree = "<group>"; };
 		64A588561C6ACAA300E72FEE /* ClockFace2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockFace2.swift; sourceTree = "<group>"; };
 		64A588581C6ACAFA00E72FEE /* ClockFace2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockFace2ViewController.swift; sourceTree = "<group>"; };
@@ -171,9 +175,19 @@
 				64B054CE1CD73708001FBEA1 /* CustomContainer */,
 				642E7C421CD9D374000C3DDD /* InteractiveUIDynamic */,
 				640399D71CDB7A5900CD8F42 /* CustomIA */,
+				648348EB1CF7DD93005D99B4 /* LayerAnimation */,
 				72815EC21C4DE97A003BA56F /* Support */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		648348EB1CF7DD93005D99B4 /* LayerAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				648348E91CF7DD8C005D99B4 /* LayerAnimation.storyboard */,
+				648348EC1CF7DFA6005D99B4 /* LayerAnimationViewController.swift */,
+			);
+			name = LayerAnimation;
 			sourceTree = "<group>";
 		};
 		64A588551C6AC96900E72FEE /* ClockFace2 */ = {
@@ -339,6 +353,7 @@
 				6482E04A1C4C939300E3869E /* LaunchScreen.storyboard in Resources */,
 				723C110A1CC8A78F00038FC6 /* BezierPath.storyboard in Resources */,
 				6482E0471C4C939300E3869E /* Assets.xcassets in Resources */,
+				648348EA1CF7DD8C005D99B4 /* LayerAnimation.storyboard in Resources */,
 				640399D61CDB7A3800CD8F42 /* CustomIA.storyboard in Resources */,
 				642E7C411CD9D35C000C3DDD /* InteractiveUIDynamic.storyboard in Resources */,
 				64B054CD1CD736BC001FBEA1 /* CustomContainer.storyboard in Resources */,
@@ -384,6 +399,7 @@
 				642E7C461CD9EEFA000C3DDD /* InteractiveMainView.swift in Sources */,
 				640399D31CDB53FC00CD8F42 /* PaneBehavior.swift in Sources */,
 				64B054DA1CD78CB1001FBEA1 /* Animator.swift in Sources */,
+				648348ED1CF7DFA6005D99B4 /* LayerAnimationViewController.swift in Sources */,
 				728813751C4FBE0B000CF114 /* DissolvedShowViewController.swift in Sources */,
 				64B054D61CD75080001FBEA1 /* ChildViewController.swift in Sources */,
 				64B054D01CD7376E001FBEA1 /* ContainerViewController.swift in Sources */,
