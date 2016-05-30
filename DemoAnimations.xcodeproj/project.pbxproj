@@ -34,6 +34,7 @@
 		64B054D61CD75080001FBEA1 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B054D51CD75080001FBEA1 /* ChildViewController.swift */; };
 		64B054D81CD76F8F001FBEA1 /* PrivateTransitionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B054D71CD76F8F001FBEA1 /* PrivateTransitionContext.swift */; };
 		64B054DA1CD78CB1001FBEA1 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B054D91CD78CB1001FBEA1 /* Animator.swift */; };
+		64B6615A1CF93F1300E05042 /* UINTSpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B661591CF93F1300E05042 /* UINTSpringAnimation.swift */; };
 		64DA1B0B1C51158900EB668D /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1B0A1C51158900EB668D /* Filter.swift */; };
 		723C10FD1CC87AAF00038FC6 /* ClockFace3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 723C10FC1CC87AAF00038FC6 /* ClockFace3.storyboard */; };
 		723C10FF1CC87D6F00038FC6 /* ClockFace3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723C10FE1CC87D6F00038FC6 /* ClockFace3ViewController.swift */; };
@@ -78,6 +79,7 @@
 		64B054D51CD75080001FBEA1 /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 		64B054D71CD76F8F001FBEA1 /* PrivateTransitionContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrivateTransitionContext.swift; path = ../PrivateTransitionContext.swift; sourceTree = "<group>"; };
 		64B054D91CD78CB1001FBEA1 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		64B661591CF93F1300E05042 /* UINTSpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINTSpringAnimation.swift; sourceTree = "<group>"; };
 		64DA1B0A1C51158900EB668D /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		723C10FC1CC87AAF00038FC6 /* ClockFace3.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClockFace3.storyboard; sourceTree = "<group>"; };
 		723C10FE1CC87D6F00038FC6 /* ClockFace3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockFace3ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			children = (
 				640399D41CDB7A3800CD8F42 /* CustomIA.storyboard */,
 				640399D81CDB7B3C00CD8F42 /* ArtificialAnimation.swift */,
+				64B661591CF93F1300E05042 /* UINTSpringAnimation.swift */,
 			);
 			name = CustomIA;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				723C10FF1CC87D6F00038FC6 /* ClockFace3ViewController.swift in Sources */,
 				6482E0401C4C939200E3869E /* AppDelegate.swift in Sources */,
 				6466CAF91C66C54E00380D0F /* ClockFace.swift in Sources */,
+				64B6615A1CF93F1300E05042 /* UINTSpringAnimation.swift in Sources */,
 				646435D81C4E28C500828B18 /* InteractiveShowViewController.swift in Sources */,
 				64A588571C6ACAA300E72FEE /* ClockFace2.swift in Sources */,
 				728813771C4FBF0C000CF114 /* FilteredImageView.swift in Sources */,

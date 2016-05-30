@@ -15,8 +15,7 @@ protocol ArtificialAnimation {
 
 private var ScreenAnimationDriverKey : Int = 0
 
-class ArtificialAnimator<T: ArtificialAnimation where T: Hashable>
-: NSObject {
+class ArtificialAnimator<T: ArtificialAnimation where T: Hashable> : NSObject {
     
     class func animatorWithScreen(screen : UIScreen) -> ArtificialAnimator {
         let _screen = screen ?? UIScreen.mainScreen()
@@ -34,16 +33,29 @@ class ArtificialAnimator<T: ArtificialAnimation where T: Hashable>
         
         return driver!
     }
+
+    func addAnimation(animatable : T) {
+        animations.insert(animatable)
+        if animations.count == 1 {
+            displayLink?.paused = false
+        }
+    }
     
-    var displayLink : CADisplayLink? = nil
-    var animations = Set<T>()
+    func removeAnimation(animatable : T) {
+        animations.remove(animatable)
+        if animations.count == 0 {
+            displayLink?.paused = true
+        }
+    }
+    
+    private var displayLink : CADisplayLink? = nil
+    private var animations = Set<T>()
         
-    init(screen : UIScreen) {
+    private init(screen : UIScreen) {
         super.init()
         displayLink = screen.displayLinkWithTarget(self, selector: #selector(animationTick(_:)))
         displayLink?.paused = true
         displayLink?.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
-        
     }
     
     func animationTick(displayLink : CADisplayLink) {
@@ -62,18 +74,15 @@ class ArtificialAnimator<T: ArtificialAnimation where T: Hashable>
             displayLink.paused = true
         }
     }
-    
-    func addAnimation(animatable : T) {
-        animations.insert(animatable)
-        if animations.count == 1 {
-            displayLink?.paused = false
+}
+
+extension UIView {
+    func animator() -> ArtificialAnimator<UINTSpringAnimation>? {
+        if let window = self.window {
+            return ArtificialAnimator<UINTSpringAnimation>.animatorWithScreen(window.screen)
         }
-    }
-    
-    func removeAnimation(animatable : T) {
-        animations.remove(animatable)
-        if animations.count == 0 {
-            displayLink?.paused = true
+        else {
+            return nil
         }
     }
 }
