@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="6gn-3P-hlT">
             <objects>
-                <viewController id="l1o-Gl-5WP" sceneMemberID="viewController">
+                <viewController id="l1o-Gl-5WP" customClass="UINTViewController" customModule="DemoAnimations" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0cf-rJ-Z1F"/>
                         <viewControllerLayoutGuide type="bottom" id="B57-BO-yGO"/>
