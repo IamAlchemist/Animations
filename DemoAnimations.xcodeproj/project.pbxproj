@@ -106,16 +106,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		640399D71CDB7A5900CD8F42 /* CustomIA */ = {
-			isa = PBXGroup;
-			children = (
-				640399D41CDB7A3800CD8F42 /* CustomIA.storyboard */,
-				640399D81CDB7B3C00CD8F42 /* ArtificialAnimation.swift */,
-				64B661591CF93F1300E05042 /* UINTSpringAnimation.swift */,
-			);
-			name = CustomIA;
-			sourceTree = "<group>";
-		};
 		642E7C421CD9D374000C3DDD /* InteractiveUIDynamic */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +113,9 @@
 				642E7C451CD9EEFA000C3DDD /* InteractiveMainView.swift */,
 				640399D21CDB53FC00CD8F42 /* PaneBehavior.swift */,
 				642E7C471CD9F1BD000C3DDD /* DraggableView.swift */,
+				640399D41CDB7A3800CD8F42 /* CustomIA.storyboard */,
+				640399D81CDB7B3C00CD8F42 /* ArtificialAnimation.swift */,
+				64B661591CF93F1300E05042 /* UINTSpringAnimation.swift */,
 			);
 			name = InteractiveUIDynamic;
 			sourceTree = "<group>";
@@ -177,7 +170,6 @@
 				723C110B1CC8A79400038FC6 /* BezierPath */,
 				64B054CE1CD73708001FBEA1 /* CustomContainer */,
 				642E7C421CD9D374000C3DDD /* InteractiveUIDynamic */,
-				640399D71CDB7A5900CD8F42 /* CustomIA */,
 				648348EB1CF7DD93005D99B4 /* LayerAnimation */,
 				72815EC21C4DE97A003BA56F /* Support */,
 			);

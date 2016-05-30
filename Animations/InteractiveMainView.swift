@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 enum PaneState {
     case Open
@@ -43,6 +44,13 @@ class InteractiveMainView : UIView {
         draggableView.delegate = self
 
         addSubview(draggableView)
+        
+        draggableView.snp_makeConstraints { make in
+            make.left.equalTo(self)
+            make.right.equalTo(self)
+            make.height.equalTo(self)
+            make.top.equalTo(self).offset(self.bounds.height * 0.75)
+        }
         
         animator = UIDynamicAnimator(referenceView: self)
         
