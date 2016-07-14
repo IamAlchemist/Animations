@@ -41,8 +41,10 @@ class ClockFace3ViewController : UIViewController {
                 animation.toValue = NSValue(CATransform3D: transform)
                 animation.duration = 0.5
                 animation.delegate = self
+                animation.fillMode = kCAFillModeForwards
+                animation.removedOnCompletion = false
                 animation.setValue(hand, forKey: "hand")
-                hand.layer.addAnimation(animation, forKey: nil)
+                hand.layer.addAnimation(animation, forKey: "hand anim")
             }
             else {
                 hand.layer.transform = transform
@@ -70,6 +72,8 @@ class ClockFace3ViewController : UIViewController {
         CATransaction.setDisableActions(true)
         hand?.layer.transform = transform
         CATransaction.commit()
+        
+        hand?.layer.removeAnimationForKey("hand anim")
     }
     
     
