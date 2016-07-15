@@ -18,11 +18,11 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lqr-NL-ZVw" id="s2U-Bl-aO8">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xy5-wa-fFY">
-                                            <rect key="frame" x="15" y="0.0" width="550" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -51,6 +51,7 @@
                         <segue destination="fXE-qg-0i4" kind="show" identifier="ShowInteractiveUIDynamicSegue" id="e1o-Sr-Wpu"/>
                         <segue destination="oOB-l1-qL7" kind="show" identifier="ShowCustomIASegue" id="DJm-ct-5xu"/>
                         <segue destination="eCg-pv-A4x" kind="show" identifier="ShowLayerAnimationSegue" id="zHe-8e-iwz"/>
+                        <segue destination="8WT-tv-n75" kind="presentation" identifier="PresentTransitionSegue" modalTransitionStyle="flipHorizontal" id="kwH-Bd-UEF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3a-Rh-5uX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -170,6 +171,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bm-MX-9or" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1403.5" y="290"/>
+        </scene>
+        <!--TrasitionDemo-->
+        <scene sceneID="RV0-Yc-PsQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TrasitionDemo" id="8WT-tv-n75" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3iM-7N-n59" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1400" y="355"/>
         </scene>
     </scenes>
 </document>
