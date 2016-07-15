@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Transition Demo View Controller-->
@@ -16,16 +17,39 @@
                     <view key="view" contentMode="scaleToFill" id="ZMD-gq-gTr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6UH-9h-vgC">
+                                <rect key="frame" x="20" y="72" width="560" height="438"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xy0-fB-9Gx">
+                                <rect key="frame" x="277" y="518" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="switchImage:" destination="pxf-9t-DN4" eventType="touchUpInside" id="7jJ-bU-X9Y"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f9u-IS-CCj" firstAttribute="top" secondItem="Xy0-fB-9Gx" secondAttribute="bottom" constant="8" id="Ej7-CA-qCM"/>
+                            <constraint firstItem="Xy0-fB-9Gx" firstAttribute="centerX" secondItem="ZMD-gq-gTr" secondAttribute="centerX" id="HXu-fa-hQz"/>
+                            <constraint firstItem="6UH-9h-vgC" firstAttribute="leading" secondItem="ZMD-gq-gTr" secondAttribute="leadingMargin" id="KZg-DB-RFa"/>
+                            <constraint firstItem="Xy0-fB-9Gx" firstAttribute="top" secondItem="6UH-9h-vgC" secondAttribute="bottom" constant="8" id="eu6-V0-FX9"/>
+                            <constraint firstItem="6UH-9h-vgC" firstAttribute="top" secondItem="0rS-7W-3eL" secondAttribute="bottom" constant="8" id="hgI-1D-iNa"/>
+                            <constraint firstItem="6UH-9h-vgC" firstAttribute="trailing" secondItem="ZMD-gq-gTr" secondAttribute="trailingMargin" id="mtE-dn-oJJ"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="BBY-zi-Lh5"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="6UH-9h-vgC" id="49h-TO-g4R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ldT-2A-11c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2245" y="714"/>
+            <point key="canvasLocation" x="2387" y="639"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0L8-sy-5GE">
