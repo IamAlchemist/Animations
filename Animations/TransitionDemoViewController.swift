@@ -36,5 +36,39 @@ class TransitionDemoViewController: UIViewController {
                                   },
                                   completion: nil)
     }
+    
+    @IBAction func performTransition(sender: UIButton) {
+        var coverImage : UIImage? = nil;
+        
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, true, 0.0)
+        if let currentContext = UIGraphicsGetCurrentContext() {
+            view.layer.renderInContext(currentContext)
+            coverImage = UIGraphicsGetImageFromCurrentImageContext()
+        }
+        
+        UIGraphicsEndImageContext()
+        
+        let coverView = UIImageView(image: coverImage)
+        
+        coverView.frame = view.bounds
+        
+        view.addSubview(coverView)
+        
+        let red = CGFloat(arc4random()) / CGFloat(INT_MAX)
+        let green = CGFloat(arc4random()) / CGFloat(INT_MAX)
+        let blue = CGFloat(arc4random()) / CGFloat(INT_MAX)
+        
+        view.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+        
+        UIView.animateWithDuration(1.0, animations: {
+            var transform = CGAffineTransformMakeScale(0.01, 0.01)
+                transform = CGAffineTransformRotate(transform, CGFloat(M_PI_2))
+                coverView.transform = transform
+                coverView.alpha = 0.0
+            },
+            completion: { _ in
+                coverView.removeFromSuperview()
+        })
+    }
 }
 

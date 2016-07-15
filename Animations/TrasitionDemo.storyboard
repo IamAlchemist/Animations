@@ -28,15 +28,24 @@
                                     <action selector="switchImage:" destination="pxf-9t-DN4" eventType="touchUpInside" id="7jJ-bU-X9Y"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTN-ex-7h0">
+                                <rect key="frame" x="239" y="285" width="122" height="30"/>
+                                <state key="normal" title="PerformTransition"/>
+                                <connections>
+                                    <action selector="performTransition:" destination="pxf-9t-DN4" eventType="touchUpInside" id="sdH-cH-xFx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="f9u-IS-CCj" firstAttribute="top" secondItem="Xy0-fB-9Gx" secondAttribute="bottom" constant="8" id="Ej7-CA-qCM"/>
+                            <constraint firstItem="vTN-ex-7h0" firstAttribute="centerX" secondItem="ZMD-gq-gTr" secondAttribute="centerX" id="G3B-zp-0OJ"/>
                             <constraint firstItem="Xy0-fB-9Gx" firstAttribute="centerX" secondItem="ZMD-gq-gTr" secondAttribute="centerX" id="HXu-fa-hQz"/>
                             <constraint firstItem="6UH-9h-vgC" firstAttribute="leading" secondItem="ZMD-gq-gTr" secondAttribute="leadingMargin" id="KZg-DB-RFa"/>
                             <constraint firstItem="Xy0-fB-9Gx" firstAttribute="top" secondItem="6UH-9h-vgC" secondAttribute="bottom" constant="8" id="eu6-V0-FX9"/>
                             <constraint firstItem="6UH-9h-vgC" firstAttribute="top" secondItem="0rS-7W-3eL" secondAttribute="bottom" constant="8" id="hgI-1D-iNa"/>
                             <constraint firstItem="6UH-9h-vgC" firstAttribute="trailing" secondItem="ZMD-gq-gTr" secondAttribute="trailingMargin" id="mtE-dn-oJJ"/>
+                            <constraint firstItem="vTN-ex-7h0" firstAttribute="centerY" secondItem="ZMD-gq-gTr" secondAttribute="centerY" id="qRq-lu-5pJ"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
