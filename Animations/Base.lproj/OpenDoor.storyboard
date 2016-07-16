@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Mb6-Rx-9E8">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Open Door View Controller-->
+        <scene sceneID="lUE-7p-mcq">
+            <objects>
+                <viewController id="Mb6-Rx-9E8" customClass="OpenDoorViewController" customModule="DemoAnimations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bJe-4j-Gzp"/>
+                        <viewControllerLayoutGuide type="bottom" id="l9K-u4-VdB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k0K-Fn-d5z">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meA-z8-0p5">
+                                <rect key="frame" x="277" y="550" width="47" height="30"/>
+                                <state key="normal" title="Toggle"/>
+                                <connections>
+                                    <action selector="toggle:" destination="Mb6-Rx-9E8" eventType="touchUpInside" id="K2Q-qu-k4W"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l9K-u4-VdB" firstAttribute="top" secondItem="meA-z8-0p5" secondAttribute="bottom" constant="20" id="hth-N0-t6o"/>
+                            <constraint firstItem="meA-z8-0p5" firstAttribute="centerX" secondItem="k0K-Fn-d5z" secondAttribute="centerX" id="tpH-CI-way"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cmc-Gc-RcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1573" y="442"/>
+        </scene>
+    </scenes>
+</document>

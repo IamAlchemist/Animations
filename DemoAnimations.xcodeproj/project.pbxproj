@@ -15,6 +15,8 @@
 		642E7C481CD9F1BD000C3DDD /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E7C471CD9F1BD000C3DDD /* DraggableView.swift */; };
 		642EE9B61D385A2C00E331FE /* TrasitionDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 642EE9B51D385A2C00E331FE /* TrasitionDemo.storyboard */; };
 		642EE9B81D385DCC00E331FE /* TransitionDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642EE9B71D385DCC00E331FE /* TransitionDemoViewController.swift */; };
+		6445BDE31D39CFD80088EF0A /* OpenDoor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6445BDE11D39CFD80088EF0A /* OpenDoor.storyboard */; };
+		6445BDE61D39D08F0088EF0A /* OpenDoor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6445BDE51D39D08F0088EF0A /* OpenDoor.swift */; };
 		646435D51C4E286500828B18 /* InteractiveTransition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646435D31C4E286500828B18 /* InteractiveTransition.storyboard */; };
 		646435D81C4E28C500828B18 /* InteractiveShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646435D71C4E28C500828B18 /* InteractiveShowViewController.swift */; };
 		6466CAF71C66C50B00380D0F /* ClockFace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6466CAF61C66C50B00380D0F /* ClockFace.storyboard */; };
@@ -61,6 +63,8 @@
 		642E7C471CD9F1BD000C3DDD /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
 		642EE9B51D385A2C00E331FE /* TrasitionDemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TrasitionDemo.storyboard; sourceTree = "<group>"; };
 		642EE9B71D385DCC00E331FE /* TransitionDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionDemoViewController.swift; sourceTree = "<group>"; };
+		6445BDE21D39CFD80088EF0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/OpenDoor.storyboard; sourceTree = "<group>"; };
+		6445BDE51D39D08F0088EF0A /* OpenDoor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenDoor.swift; sourceTree = "<group>"; };
 		646435D41C4E286500828B18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/InteractiveTransition.storyboard; sourceTree = "<group>"; };
 		646435D71C4E28C500828B18 /* InteractiveShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveShowViewController.swift; sourceTree = "<group>"; };
 		6466CAF61C66C50B00380D0F /* ClockFace.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClockFace.storyboard; sourceTree = "<group>"; };
@@ -136,6 +140,15 @@
 			name = Trasition;
 			sourceTree = "<group>";
 		};
+		6445BDE41D39CFF10088EF0A /* OpenDoor */ = {
+			isa = PBXGroup;
+			children = (
+				6445BDE11D39CFD80088EF0A /* OpenDoor.storyboard */,
+				6445BDE51D39D08F0088EF0A /* OpenDoor.swift */,
+			);
+			name = OpenDoor;
+			sourceTree = "<group>";
+		};
 		646435D61C4E28A400828B18 /* InteractiveShow */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +201,7 @@
 				642E7C421CD9D374000C3DDD /* InteractiveUIDynamic */,
 				648348EB1CF7DD93005D99B4 /* LayerAnimation */,
 				642EE9B41D3859C400E331FE /* Trasition */,
+				6445BDE41D39CFF10088EF0A /* OpenDoor */,
 				72815EC21C4DE97A003BA56F /* Support */,
 			);
 			path = Animations;
@@ -369,6 +383,7 @@
 				648348EA1CF7DD8C005D99B4 /* LayerAnimation.storyboard in Resources */,
 				640399D61CDB7A3800CD8F42 /* CustomIA.storyboard in Resources */,
 				642E7C411CD9D35C000C3DDD /* InteractiveUIDynamic.storyboard in Resources */,
+				6445BDE31D39CFD80088EF0A /* OpenDoor.storyboard in Resources */,
 				64B054CD1CD736BC001FBEA1 /* CustomContainer.storyboard in Resources */,
 				728813721C4FBD6B000CF114 /* DissolvedTransition.storyboard in Resources */,
 				723C10FD1CC87AAF00038FC6 /* ClockFace3.storyboard in Resources */,
@@ -413,6 +428,7 @@
 				640399D31CDB53FC00CD8F42 /* PaneBehavior.swift in Sources */,
 				64B054DA1CD78CB1001FBEA1 /* Animator.swift in Sources */,
 				648348ED1CF7DFA6005D99B4 /* LayerAnimationViewController.swift in Sources */,
+				6445BDE61D39D08F0088EF0A /* OpenDoor.swift in Sources */,
 				728813751C4FBE0B000CF114 /* DissolvedShowViewController.swift in Sources */,
 				64B054D61CD75080001FBEA1 /* ChildViewController.swift in Sources */,
 				722191CD1CFBEDF5009B4AF1 /* UINTViewController.swift in Sources */,
@@ -447,6 +463,14 @@
 				642E7C401CD9D35C000C3DDD /* Base */,
 			);
 			name = InteractiveUIDynamic.storyboard;
+			sourceTree = "<group>";
+		};
+		6445BDE11D39CFD80088EF0A /* OpenDoor.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6445BDE21D39CFD80088EF0A /* Base */,
+			);
+			name = OpenDoor.storyboard;
 			sourceTree = "<group>";
 		};
 		646435D31C4E286500828B18 /* InteractiveTransition.storyboard */ = {

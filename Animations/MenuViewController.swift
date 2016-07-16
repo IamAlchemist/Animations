@@ -97,7 +97,8 @@ class MenuDataSource : NSObject, UITableViewDataSource {
                   "ShowInteractiveUIDynamic",
                   "ShowCustomIA",
                   "ShowLayerAnimation",
-                  "PresentTransition"]
+                  "PresentTransition",
+                  "OpenDoor"]
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath) as! MenuTableViewCell
