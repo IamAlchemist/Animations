@@ -16,7 +16,13 @@ class BouncingBallViewController: UIViewController {
     var timeOffset : NSTimeInterval = 0
     var fromValue : AnyObject!
     var toValue : AnyObject!
+    
     var timer : NSTimer?
+    
+    var displayLink : CADisplayLink?
+    var lastStep : NSTimeInterval = 0
+    
+    var usingCADisplayLink = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,9 +81,19 @@ class BouncingBallViewController: UIViewController {
         fromValue = NSValue(CGPoint: CGPoint(x:150, y:32))
         toValue = NSValue(CGPoint: CGPoint(x: 150, y: 268))
         
-        timer?.invalidate()
-        
-        timer = NSTimer.scheduledTimerWithTimeInterval(1/60.0, target: self, selector: #selector(step(_:)), userInfo: nil, repeats: true)
+        if !usingCADisplayLink {
+            
+            timer?.invalidate()
+            
+            timer = NSTimer.scheduledTimerWithTimeInterval(1/60.0, target: self, selector: #selector(step(_:)), userInfo: nil, repeats: true)
+        }
+        else {
+            
+            lastStep = CACurrentMediaTime()
+            
+            displayLink = CADisplayLink(target: self, selector: #selector(displayLinkStep(_:)))
+            displayLink?.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSDefaultRunLoopMode)
+        }
     }
     
     func step(step: NSTimer) {
@@ -94,6 +110,27 @@ class BouncingBallViewController: UIViewController {
         if timeOffset >= duration {
             timer?.invalidate()
             timer = nil
+        }
+    }
+    
+    func displayLinkStep(displayLink: CADisplayLink) {
+        let thisStep = CACurrentMediaTime()
+        let stepDuration = thisStep - lastStep
+        lastStep = thisStep
+        
+        timeOffset = min(timeOffset + stepDuration, duration)
+        
+        var time = Float(timeOffset / duration)
+        
+        time = bounceEaseOut(time)
+        
+        let position = interpolateFromValue(fromValue, toValue: toValue, time: time)
+        
+        ballView.center = (position as! NSValue).CGPointValue()
+        
+        if timeOffset >= duration {
+            self.displayLink?.invalidate()
+            self.displayLink = nil
         }
     }
 }
