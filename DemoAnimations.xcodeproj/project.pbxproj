@@ -18,6 +18,7 @@
 		6445BDE31D39CFD80088EF0A /* OpenDoor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6445BDE11D39CFD80088EF0A /* OpenDoor.storyboard */; };
 		6445BDE61D39D08F0088EF0A /* OpenDoor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6445BDE51D39D08F0088EF0A /* OpenDoor.swift */; };
 		6445BDE81D3A06F00088EF0A /* BouncingBall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6445BDE71D3A06F00088EF0A /* BouncingBall.storyboard */; };
+		6445BDEB1D3A07C90088EF0A /* BouncingBallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6445BDEA1D3A07C90088EF0A /* BouncingBallViewController.swift */; };
 		646435D51C4E286500828B18 /* InteractiveTransition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646435D31C4E286500828B18 /* InteractiveTransition.storyboard */; };
 		646435D81C4E28C500828B18 /* InteractiveShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646435D71C4E28C500828B18 /* InteractiveShowViewController.swift */; };
 		6466CAF71C66C50B00380D0F /* ClockFace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6466CAF61C66C50B00380D0F /* ClockFace.storyboard */; };
@@ -67,6 +68,7 @@
 		6445BDE21D39CFD80088EF0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/OpenDoor.storyboard; sourceTree = "<group>"; };
 		6445BDE51D39D08F0088EF0A /* OpenDoor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenDoor.swift; sourceTree = "<group>"; };
 		6445BDE71D3A06F00088EF0A /* BouncingBall.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BouncingBall.storyboard; sourceTree = "<group>"; };
+		6445BDEA1D3A07C90088EF0A /* BouncingBallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BouncingBallViewController.swift; sourceTree = "<group>"; };
 		646435D41C4E286500828B18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/InteractiveTransition.storyboard; sourceTree = "<group>"; };
 		646435D71C4E28C500828B18 /* InteractiveShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveShowViewController.swift; sourceTree = "<group>"; };
 		6466CAF61C66C50B00380D0F /* ClockFace.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClockFace.storyboard; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				6445BDE71D3A06F00088EF0A /* BouncingBall.storyboard */,
+				6445BDEA1D3A07C90088EF0A /* BouncingBallViewController.swift */,
 			);
 			name = BouncingBall;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				723C11081CC8A76800038FC6 /* BezierPathAnimation.swift in Sources */,
 				723C11061CC8A5FB00038FC6 /* GroupAnimViewController.swift in Sources */,
 				64DA1B0B1C51158900EB668D /* Filter.swift in Sources */,
+				6445BDEB1D3A07C90088EF0A /* BouncingBallViewController.swift in Sources */,
 				72815EC01C4DE940003BA56F /* CustomShowViewController.swift in Sources */,
 				6466CAFB1C66C6B900380D0F /* ClockFaceViewController.swift in Sources */,
 				640399D91CDB7B3C00CD8F42 /* ArtificialAnimation.swift in Sources */,

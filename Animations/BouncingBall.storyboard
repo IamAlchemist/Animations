@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Bouncing Ball View Controller-->
         <scene sceneID="sTE-ns-egY">
             <objects>
-                <viewController id="Q9u-hy-O8L" sceneMemberID="viewController">
+                <viewController id="Q9u-hy-O8L" customClass="BouncingBallViewController" customModule="DemoAnimations" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MCN-43-7F9"/>
                         <viewControllerLayoutGuide type="bottom" id="W6l-VW-jFg"/>
@@ -16,9 +16,26 @@
                     <view key="view" contentMode="scaleToFill" id="lyp-hL-Jbf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KBj-6U-zq1" userLabel="container">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="SnF-Sk-zWi"/>
+                                    <constraint firstAttribute="height" constant="300" id="Uau-1x-Vr5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KBj-6U-zq1" firstAttribute="centerY" secondItem="lyp-hL-Jbf" secondAttribute="centerY" id="DZS-uU-wRk"/>
+                            <constraint firstItem="KBj-6U-zq1" firstAttribute="centerX" secondItem="lyp-hL-Jbf" secondAttribute="centerX" id="aIw-VB-jy4"/>
+                        </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="container" destination="KBj-6U-zq1" id="MLc-Xb-cyY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mq2-MB-V9i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
