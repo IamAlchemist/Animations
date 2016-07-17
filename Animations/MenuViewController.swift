@@ -101,7 +101,8 @@ class MenuDataSource : NSObject, UITableViewDataSource {
                   "OpenDoor",
                   "BouncingBall",
                   "PullToRefresh",
-                  "KeyFrameEasing"]
+                  "KeyFrameEasing",
+                  "Chalkboard"]
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath) as! MenuTableViewCell
