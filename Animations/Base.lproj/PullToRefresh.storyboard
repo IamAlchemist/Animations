@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dEe-la-3qr">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Pull To Refresh View Controller-->
+        <scene sceneID="Q8d-7n-MAs">
+            <objects>
+                <collectionViewController id="dEe-la-3qr" customClass="PullToRefreshViewController" customModule="DemoAnimations" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" id="1KL-IC-YfR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.95294123890000004" green="0.95294123890000004" blue="0.96470594409999999" alpha="1" colorSpace="deviceRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8IY-tn-aCu" customClass="PrimeLayout" customModule="DemoAnimations" customModuleProvider="target">
+                            <size key="itemSize" width="93" height="93"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PullToRefreshCell" id="aih-hc-BXw" customClass="PullToRefreshCell" customModule="DemoAnimations" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="93" height="93"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrQ-Va-OgB">
+                                            <rect key="frame" x="0.0" y="0.0" width="93" height="93"/>
+                                            <color key="backgroundColor" red="0.29019609089999998" green="0.64705884459999996" blue="0.89019614459999996" alpha="1" colorSpace="deviceRGB"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="71"/>
+                                            <color key="textColor" red="0.95294123890000004" green="0.95294123890000004" blue="0.96470594409999999" alpha="1" colorSpace="deviceRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="wrQ-Va-OgB" secondAttribute="trailing" id="0Ho-gk-tn9"/>
+                                    <constraint firstAttribute="bottom" secondItem="wrQ-Va-OgB" secondAttribute="bottom" id="Dys-ED-Xz9"/>
+                                    <constraint firstItem="wrQ-Va-OgB" firstAttribute="leading" secondItem="aih-hc-BXw" secondAttribute="leading" id="RHX-eB-Hcc"/>
+                                    <constraint firstItem="wrQ-Va-OgB" firstAttribute="top" secondItem="aih-hc-BXw" secondAttribute="top" id="yj0-DQ-IMv"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="label" destination="wrQ-Va-OgB" id="SNw-h6-p3R"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="dEe-la-3qr" id="dMW-n8-eJ3"/>
+                            <outlet property="delegate" destination="dEe-la-3qr" id="wjN-65-Hs4"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sh6-l5-Dzb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1524" y="575"/>
+        </scene>
+    </scenes>
+</document>
