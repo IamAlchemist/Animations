@@ -91,7 +91,7 @@ class PullToRefreshViewController: UICollectionViewController {
         writeText.fromValue = NSNumber(float:0)
         writeText.toValue = NSNumber(float:1)
         writeText.fillMode = kCAFillModeForwards
-        writeText.removedOnCompletion = false
+//        writeText.removedOnCompletion = false
         
         textShapeLayer.addAnimation(writeText, forKey: nil)
     }
