@@ -43,6 +43,7 @@ class ClockFace3ViewController : UIViewController {
                 animation.delegate = self
                 animation.fillMode = kCAFillModeForwards
                 animation.removedOnCompletion = false
+                animation.timingFunction = CAMediaTimingFunction(controlPoints: 1, 0, 0.75, 1)
                 animation.setValue(hand, forKey: "hand")
                 hand.layer.addAnimation(animation, forKey: "hand anim")
             }
