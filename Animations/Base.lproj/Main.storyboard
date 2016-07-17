@@ -55,6 +55,7 @@
                         <segue destination="k84-ny-plB" kind="show" identifier="OpenDoorSegue" id="Ya4-TB-dY8"/>
                         <segue destination="WRS-Dy-FZf" kind="show" identifier="BouncingBallSegue" id="ZfF-g0-cGX"/>
                         <segue destination="OXc-jj-3Do" kind="show" identifier="PullToRefreshSegue" id="f5V-nx-NS5"/>
+                        <segue destination="Cbq-ge-Q5z" kind="show" identifier="KeyFrameEasingSegue" id="koP-K4-ldd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3a-Rh-5uX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -206,6 +207,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AYb-yX-lOF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1398.5" y="-387"/>
+        </scene>
+        <!--KeyFrameEasing-->
+        <scene sceneID="jxK-CR-Ca0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="KeyFrameEasing" id="Cbq-ge-Q5z" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YhE-MH-sIp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1406" y="-439"/>
         </scene>
     </scenes>
 </document>
