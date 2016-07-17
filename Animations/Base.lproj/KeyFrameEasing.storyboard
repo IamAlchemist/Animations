@@ -18,23 +18,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8K-wj-maF" userLabel="ContainerView">
-                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="B2K-jj-nJu"/>
-                                    <constraint firstAttribute="height" constant="200" id="mzq-73-Ya5"/>
+                                    <constraint firstAttribute="width" constant="300" id="B2K-jj-nJu"/>
+                                    <constraint firstAttribute="height" constant="300" id="mzq-73-Ya5"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGS-OS-eNz">
-                                <rect key="frame" x="255" y="417" width="90" height="30"/>
+                                <rect key="frame" x="255" y="467" width="90" height="30"/>
                                 <state key="normal" title="ChangeColor"/>
                                 <connections>
                                     <action selector="changeColor:" destination="OHd-QZ-aen" eventType="touchUpInside" id="zIO-fg-v03"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppB-G9-uk4">
+                                <rect key="frame" x="274" y="112" width="52" height="30"/>
+                                <state key="normal" title="Bounce"/>
+                                <connections>
+                                    <action selector="bounce:" destination="OHd-QZ-aen" eventType="touchUpInside" id="VKY-GZ-gKs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ppB-G9-uk4" firstAttribute="centerX" secondItem="Jhb-aU-bGI" secondAttribute="centerX" id="61U-wc-nai"/>
+                            <constraint firstItem="b8K-wj-maF" firstAttribute="top" secondItem="ppB-G9-uk4" secondAttribute="bottom" constant="8" id="Qje-w3-Am2"/>
                             <constraint firstItem="bGS-OS-eNz" firstAttribute="top" secondItem="b8K-wj-maF" secondAttribute="bottom" constant="17" id="XCJ-Ca-AU4"/>
                             <constraint firstItem="bGS-OS-eNz" firstAttribute="centerX" secondItem="Jhb-aU-bGI" secondAttribute="centerX" id="bQs-Hj-mhU"/>
                             <constraint firstItem="b8K-wj-maF" firstAttribute="centerY" secondItem="Jhb-aU-bGI" secondAttribute="centerY" id="laQ-h4-9Fm"/>
