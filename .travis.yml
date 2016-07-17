@@ -5,7 +5,7 @@ xcode_scheme: Animations
 target: DemoAnimations
 
 script:
-  - xcodebuild -project {xcode_project}.xcodeproj -target {target} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+  - xcodebuild -project DemoAnimations.xcodeproj -target DemoAnimations -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 
 before_script:
   - brew update
