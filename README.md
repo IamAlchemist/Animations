@@ -1,4 +1,4 @@
 # Animations
 
-https://api.travis-ci.org/IamAlchemist/DemoAnimations.svg?branch=master
+[![Build Status](https://travis-ci.org/IamAlchemist/DemoAnimations.svg?branch=master)](https://travis-ci.org/IamAlchemist/DemoAnimations)
 
