@@ -47,6 +47,9 @@
 		64B054D81CD76F8F001FBEA1 /* PrivateTransitionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B054D71CD76F8F001FBEA1 /* PrivateTransitionContext.swift */; };
 		64B054DA1CD78CB1001FBEA1 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B054D91CD78CB1001FBEA1 /* Animator.swift */; };
 		64B6615A1CF93F1300E05042 /* UINTSpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B661591CF93F1300E05042 /* UINTSpringAnimation.swift */; };
+		64C3E79D1D43128C009D410D /* CacheImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64C3E79C1D43128C009D410D /* CacheImage.storyboard */; };
+		64C3E7A01D431336009D410D /* Vacation Photos in Resources */ = {isa = PBXBuildFile; fileRef = 64C3E79F1D431336009D410D /* Vacation Photos */; };
+		64C3E7A21D43137F009D410D /* CacheImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C3E7A11D43137F009D410D /* CacheImageViewController.swift */; };
 		64DA1B0B1C51158900EB668D /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1B0A1C51158900EB668D /* Filter.swift */; };
 		64DE0DD41D3C42D6007FF9B5 /* Chalkboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DE0DD31D3C42D6007FF9B5 /* Chalkboard.storyboard */; };
 		64DE0DD71D3C4341007FF9B5 /* ChalkboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DE0DD61D3C4341007FF9B5 /* ChalkboardView.swift */; };
@@ -107,6 +110,9 @@
 		64B054D71CD76F8F001FBEA1 /* PrivateTransitionContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrivateTransitionContext.swift; path = ../PrivateTransitionContext.swift; sourceTree = "<group>"; };
 		64B054D91CD78CB1001FBEA1 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		64B661591CF93F1300E05042 /* UINTSpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINTSpringAnimation.swift; sourceTree = "<group>"; };
+		64C3E79C1D43128C009D410D /* CacheImage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CacheImage.storyboard; sourceTree = "<group>"; };
+		64C3E79F1D431336009D410D /* Vacation Photos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Vacation Photos"; sourceTree = "<group>"; };
+		64C3E7A11D43137F009D410D /* CacheImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheImageViewController.swift; sourceTree = "<group>"; };
 		64DA1B0A1C51158900EB668D /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		64DE0DD31D3C42D6007FF9B5 /* Chalkboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chalkboard.storyboard; sourceTree = "<group>"; };
 		64DE0DD61D3C4341007FF9B5 /* ChalkboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChalkboardView.swift; sourceTree = "<group>"; };
@@ -220,6 +226,7 @@
 		6482E0331C4C939200E3869E = {
 			isa = PBXGroup;
 			children = (
+				64C3E79F1D431336009D410D /* Vacation Photos */,
 				64B054D11CD73D2F001FBEA1 /* Frameworks */,
 				6482E03E1C4C939200E3869E /* Animations */,
 				6482E03D1C4C939200E3869E /* Products */,
@@ -255,6 +262,7 @@
 				6445BDEF1D3B09ED0088EF0A /* PullToRefresh */,
 				6445BDF81D3B57E80088EF0A /* KeyFrameEasing */,
 				64DE0DD51D3C42DE007FF9B5 /* Chalkboard */,
+				64C3E79E1D4312C1009D410D /* CacheImage */,
 				72815EC21C4DE97A003BA56F /* Support */,
 			);
 			path = Animations;
@@ -297,6 +305,15 @@
 				64B054D21CD73D51001FBEA1 /* SnapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		64C3E79E1D4312C1009D410D /* CacheImage */ = {
+			isa = PBXGroup;
+			children = (
+				64C3E79C1D43128C009D410D /* CacheImage.storyboard */,
+				64C3E7A11D43137F009D410D /* CacheImageViewController.swift */,
+			);
+			name = CacheImage;
 			sourceTree = "<group>";
 		};
 		64DE0DD51D3C42DE007FF9B5 /* Chalkboard */ = {
@@ -439,6 +456,7 @@
 				64A588541C6AC95300E72FEE /* ClockFace2.storyboard in Resources */,
 				6445BDFB1D3B584C0088EF0A /* KeyFrameEasing.storyboard in Resources */,
 				723C11031CC8A5D900038FC6 /* GroupAnim.storyboard in Resources */,
+				64C3E79D1D43128C009D410D /* CacheImage.storyboard in Resources */,
 				72815EBE1C4DE8DF003BA56F /* CustomShow.storyboard in Resources */,
 				6482E04A1C4C939300E3869E /* LaunchScreen.storyboard in Resources */,
 				723C110A1CC8A78F00038FC6 /* BezierPath.storyboard in Resources */,
@@ -449,6 +467,7 @@
 				64DE0DD41D3C42D6007FF9B5 /* Chalkboard.storyboard in Resources */,
 				642E7C411CD9D35C000C3DDD /* InteractiveUIDynamic.storyboard in Resources */,
 				6445BDE31D39CFD80088EF0A /* OpenDoor.storyboard in Resources */,
+				64C3E7A01D431336009D410D /* Vacation Photos in Resources */,
 				64B054CD1CD736BC001FBEA1 /* CustomContainer.storyboard in Resources */,
 				728813721C4FBD6B000CF114 /* DissolvedTransition.storyboard in Resources */,
 				723C10FD1CC87AAF00038FC6 /* ClockFace3.storyboard in Resources */,
@@ -501,6 +520,7 @@
 				728813751C4FBE0B000CF114 /* DissolvedShowViewController.swift in Sources */,
 				64B054D61CD75080001FBEA1 /* ChildViewController.swift in Sources */,
 				722191CD1CFBEDF5009B4AF1 /* UINTViewController.swift in Sources */,
+				64C3E7A21D43137F009D410D /* CacheImageViewController.swift in Sources */,
 				6445BDF51D3B12E20088EF0A /* PullToRefreshViewController.swift in Sources */,
 				64B054D01CD7376E001FBEA1 /* ContainerViewController.swift in Sources */,
 				64B054D81CD76F8F001FBEA1 /* PrivateTransitionContext.swift in Sources */,

@@ -57,6 +57,7 @@
                         <segue destination="OXc-jj-3Do" kind="show" identifier="PullToRefreshSegue" id="f5V-nx-NS5"/>
                         <segue destination="Cbq-ge-Q5z" kind="show" identifier="KeyFrameEasingSegue" id="koP-K4-ldd"/>
                         <segue destination="yWb-qP-NEI" kind="show" identifier="ChalkboardSegue" id="eWn-fT-YF0"/>
+                        <segue destination="fzk-t4-MZ9" kind="show" identifier="ImageCacheSegue" id="mOc-i3-ffg"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3a-Rh-5uX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -224,6 +225,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cc2-SB-F5o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1391" y="-492"/>
+        </scene>
+        <!--CacheImage-->
+        <scene sceneID="Vx8-QM-2T4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CacheImage" id="fzk-t4-MZ9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gv9-Gs-ibc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1393.5" y="-539"/>
         </scene>
     </scenes>
 </document>
