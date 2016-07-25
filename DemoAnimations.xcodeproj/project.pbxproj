@@ -30,6 +30,7 @@
 		6466CAF71C66C50B00380D0F /* ClockFace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6466CAF61C66C50B00380D0F /* ClockFace.storyboard */; };
 		6466CAF91C66C54E00380D0F /* ClockFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466CAF81C66C54E00380D0F /* ClockFace.swift */; };
 		6466CAFB1C66C6B900380D0F /* ClockFaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466CAFA1C66C6B900380D0F /* ClockFaceViewController.swift */; };
+		646989391D45B2E6005BD6CF /* ImageExplosion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646989381D45B2E6005BD6CF /* ImageExplosion.storyboard */; };
 		6482E0401C4C939200E3869E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6482E03F1C4C939200E3869E /* AppDelegate.swift */; };
 		6482E0421C4C939200E3869E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6482E0411C4C939200E3869E /* MenuViewController.swift */; };
 		6482E0451C4C939200E3869E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6482E0431C4C939200E3869E /* Main.storyboard */; };
@@ -91,6 +92,7 @@
 		6466CAF61C66C50B00380D0F /* ClockFace.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClockFace.storyboard; sourceTree = "<group>"; };
 		6466CAF81C66C54E00380D0F /* ClockFace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockFace.swift; sourceTree = "<group>"; };
 		6466CAFA1C66C6B900380D0F /* ClockFaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockFaceViewController.swift; sourceTree = "<group>"; };
+		646989381D45B2E6005BD6CF /* ImageExplosion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageExplosion.storyboard; sourceTree = "<group>"; };
 		6482E03C1C4C939200E3869E /* DemoAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6482E03F1C4C939200E3869E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6482E0411C4C939200E3869E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +225,14 @@
 			name = ClockFace;
 			sourceTree = "<group>";
 		};
+		6469893A1D45B747005BD6CF /* IamgeExplosion */ = {
+			isa = PBXGroup;
+			children = (
+				646989381D45B2E6005BD6CF /* ImageExplosion.storyboard */,
+			);
+			name = IamgeExplosion;
+			sourceTree = "<group>";
+		};
 		6482E0331C4C939200E3869E = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +273,7 @@
 				6445BDF81D3B57E80088EF0A /* KeyFrameEasing */,
 				64DE0DD51D3C42DE007FF9B5 /* Chalkboard */,
 				64C3E79E1D4312C1009D410D /* CacheImage */,
+				6469893A1D45B747005BD6CF /* IamgeExplosion */,
 				72815EC21C4DE97A003BA56F /* Support */,
 			);
 			path = Animations;
@@ -455,6 +466,7 @@
 				642EE9B61D385A2C00E331FE /* TrasitionDemo.storyboard in Resources */,
 				64A588541C6AC95300E72FEE /* ClockFace2.storyboard in Resources */,
 				6445BDFB1D3B584C0088EF0A /* KeyFrameEasing.storyboard in Resources */,
+				646989391D45B2E6005BD6CF /* ImageExplosion.storyboard in Resources */,
 				723C11031CC8A5D900038FC6 /* GroupAnim.storyboard in Resources */,
 				64C3E79D1D43128C009D410D /* CacheImage.storyboard in Resources */,
 				72815EBE1C4DE8DF003BA56F /* CustomShow.storyboard in Resources */,

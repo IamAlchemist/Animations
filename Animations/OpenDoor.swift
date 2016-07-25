@@ -2,6 +2,8 @@
 //  OpenDoor.swift
 //  DemoAnimations
 //
+//  show interactive animation and auto animation with "tranform.rotate.y"
+//
 //  Created by wizard lee on 7/16/16.
 //  Copyright © 2016 Alchemist. All rights reserved.
 //
@@ -53,7 +55,7 @@ class OpenDoorViewController: UIViewController {
     @IBAction func toggle(sender: UIButton) {
         doorLayer.removeAllAnimations()
         
-        if isAuto {
+        if !isAuto {
             gesture = UIPanGestureRecognizer(target: self, action: #selector(panned(_:)))
             
             doorLayer.speed = 0.0

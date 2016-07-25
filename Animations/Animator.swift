@@ -2,6 +2,8 @@
 //  Animator.swift
 //  DemoAnimations
 //
+//  UIViewControllerAnimatedTransitioning, and animateWithDuration with "usingSpringWithDamping"
+//
 //  Created by wizard on 5/2/16.
 //  Copyright © 2016 Alchemist. All rights reserved.
 //

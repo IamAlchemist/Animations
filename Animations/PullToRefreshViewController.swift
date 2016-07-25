@@ -2,6 +2,9 @@
 //  PullToRefreshViewController.swift
 //  DemoAnimations
 //
+//  still interesting animation speed = 0
+//  more cashapelayer with cgpath and strokeEnd
+//
 //  Created by wizard lee on 7/17/16.
 //  Copyright © 2016 Alchemist. All rights reserved.
 //

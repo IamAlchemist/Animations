@@ -2,6 +2,8 @@
 //  TransitionDemoViewController.swift
 //  DemoAnimations
 //
+//  show UIView.transitionWithView()
+//
 //  Created by wizard lee on 7/15/16.
 //  Copyright © 2016 Alchemist. All rights reserved.
 //

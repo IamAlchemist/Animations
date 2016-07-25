@@ -2,6 +2,8 @@
 //  LayerAnimationViewController.swift
 //  DemoAnimations
 //
+// https://www.objc.io/issues/12-animations/view-layer-synergy/
+//
 //  Created by wizard on 5/27/16.
 //  Copyright © 2016 Alchemist. All rights reserved.
 //
@@ -16,24 +18,15 @@ class LayerAnimationViewController: UIViewController {
     @IBOutlet weak var orangeView: UIView!
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
-        print("outside animation block: \(view.actionForLayer(view.layer, forKey: "position"))")
-        
-        let temp : Int? = nil
-        print("\(temp), \(NSNull())")
-        
-        //        UIView.animateWithDuration(0.3) {
-        //            self.view.alpha = 0.2
-        //            print("in animation block: \(self.view.actionForLayer(self.view.layer, forKey: "opacity"))")
-        //        }
     }
     
     @IBAction func showAnimation(sender: UIButton) {
         UIView.RD_popAnimationWithDuration(2) {
-            self.orangeView.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_4))
+            self.orangeView.layer.setAffineTransform(CGAffineTransformMakeRotation(CGFloat(M_PI_4)))
+//            self.orangeView.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_4))
         }
-        
-        self.orangeView.transform = CGAffineTransformIdentity
+        self.orangeView.layer.setAffineTransform(CGAffineTransformIdentity)
+//        self.orangeView.transform = CGAffineTransformIdentity
     }
 }
 
