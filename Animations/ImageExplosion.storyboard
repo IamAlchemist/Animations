@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Image Explosion View Controller-->
         <scene sceneID="7zv-CB-7kR">
             <objects>
-                <viewController id="Swl-Wa-cZq" sceneMemberID="viewController">
+                <viewController id="Swl-Wa-cZq" customClass="ImageExplosionViewController" customModule="DemoAnimations" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xPq-1O-tIn"/>
                         <viewControllerLayoutGuide type="bottom" id="6T4-UP-0j3"/>
@@ -16,8 +16,44 @@
                     <view key="view" contentMode="scaleToFill" id="6WM-SP-73P">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5a-I6-4j1">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gom-es-Znd">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="480"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQR-2P-9fs">
+                                        <rect key="frame" x="277" y="542" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="animate:" destination="Swl-Wa-cZq" eventType="touchUpInside" id="x8y-wp-ZoA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="SQR-2P-9fs" firstAttribute="centerX" secondItem="Y5a-I6-4j1" secondAttribute="centerX" id="5CG-CS-pLD"/>
+                                    <constraint firstAttribute="bottom" secondItem="gom-es-Znd" secondAttribute="bottom" constant="100" id="6QW-4c-GLa"/>
+                                    <constraint firstItem="gom-es-Znd" firstAttribute="top" secondItem="Y5a-I6-4j1" secondAttribute="top" id="97f-qJ-pGe"/>
+                                    <constraint firstAttribute="trailing" secondItem="gom-es-Znd" secondAttribute="trailing" id="GqS-bL-j5O"/>
+                                    <constraint firstAttribute="bottom" secondItem="SQR-2P-9fs" secondAttribute="bottom" constant="8" id="RgG-1b-fqp"/>
+                                    <constraint firstItem="gom-es-Znd" firstAttribute="leading" secondItem="Y5a-I6-4j1" secondAttribute="leading" id="n70-Hx-KWz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Y5a-I6-4j1" secondAttribute="trailing" id="bFc-wI-iVA"/>
+                            <constraint firstItem="Y5a-I6-4j1" firstAttribute="top" secondItem="xPq-1O-tIn" secondAttribute="bottom" id="oif-xI-VfO"/>
+                            <constraint firstItem="6T4-UP-0j3" firstAttribute="top" secondItem="Y5a-I6-4j1" secondAttribute="bottom" id="qId-ZO-5bA"/>
+                            <constraint firstItem="Y5a-I6-4j1" firstAttribute="leading" secondItem="6WM-SP-73P" secondAttribute="leading" id="zXw-0A-R64"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="Y5a-I6-4j1" id="0ah-qK-x5o"/>
+                        <outlet property="imageView" destination="gom-es-Znd" id="gcu-p1-WFE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NTe-MD-vgt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
